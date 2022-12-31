@@ -7,8 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Web Dev Docs",
-  tagline:
-    "Documentation on various web development tools and other useful information.",
+  tagline: "Documentation on web development tips, tools, and techniques.",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",

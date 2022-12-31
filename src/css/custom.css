@@ -22,14 +22,79 @@
 [data-theme="dark"] {
   --ifm-color-primary: hsl(240, 90%, 70%);
   --ifm-link-color: var(--ifm-color-primary);
-  --ifm-color-primary-dark: hsl(167, 68%, 41%);
-  --ifm-color-primary-darker: hsl(167, 68%, 38%);
-  --ifm-color-primary-darkest: hsl(167, 68%, 32%);
-  --ifm-color-primary-light: hsl(167, 68%, 50%);
-  --ifm-color-primary-lighter: hsl(167, 68%, 52%);
-  --ifm-color-primary-lightest: hsl(167, 68%, 59%);
+  --ifm-color-primary-dark: hsl(240, 90%, 65%);
+  --ifm-color-primary-darker: hsl(240, 90%, 60%);
+  --ifm-color-primary-darkest: hsl(240, 90%, 55%);
+  --ifm-color-primary-light: hsl(240, 90%, 75%);
+  --ifm-color-primary-lighter: hsl(240, 90%, 80%);
+  --ifm-color-primary-lightest: hsl(240, 90%, 85%);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Import the below JSON into colorbox.io
+[
+  {
+    "properties": {
+      "steps": 11,
+      "hue": {
+        "start": 240,
+        "end": 240,
+        "curve": "easeOutQuad"
+      },
+      "saturation": {
+        "start": 0.48,
+        "end": 0.48,
+        "rate": 1,
+        "curve": "easeOutQuad"
+      },
+      "brightness": {
+        "start": 0.65,
+        "end": 0.35,
+        "curve": "linear"
+      }
+    },
+    "options": {
+      "minorSteps": [
+        0,
+        1
+      ],
+      "name": "New Color 🌞",
+      "provideInverted": false,
+      "rotation": "clockwise"
+    }
+  },
+  {
+    "properties": {
+      "steps": 11,
+      "hue": {
+        "start": 240,
+        "end": 240,
+        "curve": "easeInQuad"
+      },
+      "saturation": {
+        "start": 0.6,
+        "end": 0.6,
+        "rate": 1,
+        "curve": "easeInQuad"
+      },
+      "brightness": {
+        "start": 0.6,
+        "end": 1,
+        "curve": "linear"
+      }
+    },
+    "options": {
+      "minorSteps": [
+        0,
+        1
+      ],
+      "name": "New Color 🌙",
+      "provideInverted": false,
+      "rotation": "counterclockwise"
+    }
+  }
+]
+*/
 
 /* You can override the default Infima variables here. */
 /* :root {

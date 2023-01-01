@@ -1,8 +1,8 @@
-import CSSUnits from './CSS Units.png';
-
+---
+sidebar_position: 2
 ---
 
-## sidebar_position: 2
+import CSSUnits from './CSS Units.png';
 
 # CSS
 
@@ -16,7 +16,7 @@ Fantastic documentation on CSS can be found here: [CSS MDN Docs](https://develop
 
 ## Properties
 
-Properties are things like `background-color` or `border` and define properties of a specific thing.
+Properties are things like `background-color` or `border` and define properties of a specific element.
 
 ```css title="Change the background color of every img"
 img {
@@ -29,7 +29,7 @@ img {
 In HTML you can define classes like:
 
 ```html
-<p class="paragraph-class">This is a paragraph with "paragraph-class" class</p>
+<p class="main-paragraph">This is a paragraph with "main-paragraph" class</p>
 ```
 
 Then in CSS you can change what the class does like:
@@ -125,7 +125,7 @@ Position of element is relative to webpage. So if you scroll it remains in the s
 
 Inside parent, can set `text-align: center;`. This works for inline, and block elements, but not inline-block elements or modified width block elements. Inside element, can do `margin: auto;` to get around this issue.
 
-Looks like `margin: 'top' 'right' 'bottom' 'left'` so probably `margin: 0 auto 0 auto;`. Shorthand version of this is `margin: 0 auto;` which centers horizontally but not vertically.
+Looks like `margin: 'top' 'right' 'bottom' 'left'` so if you want to center horizontally but not vertically, use `margin: 0 auto 0 auto;`. Shorthand version of this is `margin: 0 auto;`
 
 ## Fonts
 

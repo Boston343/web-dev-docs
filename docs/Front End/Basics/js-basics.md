@@ -6,6 +6,14 @@ sidebar_position: 4
 
 Javascript allows you to change the look of the website based on user or other input. An example is dropdown menus.
 
+To use javascript in a website, in html file you can use:
+
+```html
+<script type="text/javascript">
+  //javascript code
+</script>
+```
+
 ## Variables
 
 Variables in JS can be defined using `var`, `let`, or `const`. Main types are string, number, and boolean. They are defined like:
@@ -176,6 +184,37 @@ while (something is true) {
 for (i = 0; i < 2; i++) {
   // do something
 }
+```
+
+## Audio
+
+```js
+var audio = new Audio("sounds/tom-1.mp3");
+audio.play();
+```
+
+## Constructor Functions
+
+Rather than camelCase, constructor function must start with a capital letter. Ex.
+
+```js
+function BellBoy(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+// then use with
+var bellboy1 = new BellBoy("Timmy", 19);
+```
+
+## Delay function
+
+`setTimeout();` function. Delays execution of a function which is first argument to `setTimeout();`. The time is in milliseconds.
+
+Further details [here](https://www.tutorialspoint.com/How-to-delay-a-JavaScript-function-call-using-JavaScript)
+
+```js
+setTimeout(functionToCall, timeInMs);
 ```
 
 ## Modules

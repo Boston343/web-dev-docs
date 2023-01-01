@@ -12,6 +12,12 @@ Fantastic documentation on HTML can be found here: [HTML MDN Docs](https://devel
 
 :::
 
+## HTML Cheatsheet
+
+import HTMLCheatsheet from './HTML_Cheatsheet.JPG';
+
+<img src={HTMLCheatsheet} alt="HTML Cheetsheet" style={{width:800}}/>
+
 ## Some Basic Elements
 
 ### Header

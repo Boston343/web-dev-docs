@@ -2,8 +2,6 @@
 sidebar_position: 2
 ---
 
-import CSSUnits from './CSS Units.png';
-
 # CSS
 
 While HTML is the specific elements on a webpage, CSS determines how those elements visually appear. This is how you make a website look **gorgeous**. This files have the extension `.css`
@@ -147,6 +145,8 @@ Sizing in CSS can be difficult. For example, `px` is not dynamic, but percentage
 Percentages and `em` inherets from parent. Using `rem` instead of `em` allows you to ignore all parent settings. It's generally better.
 
 ## CSS Units
+
+import CSSUnits from './CSS Units.png';
 
 <img src={CSSUnits} alt="CSS Units" style={{width:600}}/>
 

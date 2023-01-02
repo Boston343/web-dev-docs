@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Flexbox is a layout method for arranging items in rows or columns. Items _flex_ (expand) to fill additional space or shrink to fit into smaller spaces.
 
-:::note
+:::info
 
 Here is a [crash course](https://www.youtube.com/watch?v=3YW65K6LcIA) I followed to learn Flexbox basics.
 

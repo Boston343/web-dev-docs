@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # React
 
-**[React](https://reactjs.org/)** is a JavaScript library for building user interfaces.
+**[React](https://reactjs.org/)** is a popular JavaScript library for building user interfaces.
 
 It is the "most loved and popular front-end framework". It breaks down everything into component trees.
 
@@ -99,6 +99,8 @@ root.render(<h1 style={customStyle}>Hello World!</h1>);
 ## Components
 
 Each component has small bits of HTML, CSS, and JS. Each component can talk to the server individually, so each can load separately (you don't need to reload the entire page).
+
+Every component (and its file) should start with a capital letter. Ex. component `ToDoItem` in file `ToDoItem.jsx`.
 
 ### Creating Components
 
@@ -442,6 +444,25 @@ You can pass functions to the child, and you can use those functions as the chil
 [Example 1](https://codesandbox.io/s/managing-a-component-tree-forked-cuxus7?file=/src/components/ToDoItem.jsx)
 
 [Example 2](https://codesandbox.io/s/managing-a-component-tree-practice-forked-sj60k8?file=/src/components/InputArea.jsx)
+
+```js title="ToDoItem.jsx"
+import React from "react";
+
+function ToDoItem(props) {
+  return (
+    <li
+      onClick={() => {
+        // here is where you call the function passed from parent
+        props.onChecked(props.id);
+      }}
+    >
+      {props.item}
+    </li>
+  );
+}
+
+export default ToDoItem;
+```
 
 ## React Framework
 

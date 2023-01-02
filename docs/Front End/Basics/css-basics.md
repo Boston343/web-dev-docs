@@ -6,9 +6,9 @@ sidebar_position: 2
 
 While HTML is the specific elements on a webpage, CSS determines how those elements visually appear. This is how you make a website look **gorgeous**. This files have the extension `.css`
 
-:::note
+:::info
 
-Fantastic documentation on CSS can be found here: **[CSS MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)**
+Good documentation on CSS can be found here: **[CSS MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)**
 
 :::
 

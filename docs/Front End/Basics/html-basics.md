@@ -6,9 +6,9 @@ sidebar_position: 1
 
 All websites need HTML, it's the basic elements of a site. Normally, there is a start tag, content, and an end tag. However some are considered **self closing tags** where they don't require a specific closing tag. These files have the extension `.html`
 
-:::note
+:::info
 
-Fantastic documentation on HTML can be found here: **[HTML MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)**
+Good documentation on HTML can be found here: **[HTML MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)**
 
 :::
 

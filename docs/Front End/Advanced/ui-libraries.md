@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Three of the most popular UI libraries are Material UI (MUI), Bootstrap, and Tailwind CSS. They can speed up the development of your UI by using various classes and components.
 
-This page also has a few other useful libraries.
+This page also has a few other useful libraries that I have used.
 
 ## Material UI
 

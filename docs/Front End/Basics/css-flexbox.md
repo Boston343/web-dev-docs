@@ -67,13 +67,13 @@ flex: 1;
 
 ## gap
 
-`gap` functions like margin except it is only between flexbox elements. Good demonstration [here](https://coryrylan.com/blog/css-gap-space-with-flexbox)
+`gap` functions like margin except it is only between flexbox elements. Good demonstration **[here](https://coryrylan.com/blog/css-gap-space-with-flexbox)**
 
 ## Bonus: Font Awesome
 
 TODO: move this elsewhere
 
-Font Awesome is a collection of a ton of icons for free use (and more paid). Search through the icons [here](https://fontawesome.com/search).
+Font Awesome is a collection of a ton of icons for free use (and more paid). Search through the icons **[here](https://fontawesome.com/search)**.
 
 To use in your website, put in the below line into the head of your html file.
 

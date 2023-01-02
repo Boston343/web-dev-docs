@@ -8,7 +8,7 @@ While HTML is the specific elements on a webpage, CSS determines how those eleme
 
 :::note
 
-Fantastic documentation on CSS can be found here: [CSS MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+Fantastic documentation on CSS can be found here: **[CSS MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)**
 
 :::
 
@@ -42,13 +42,13 @@ Then in CSS you can change what the class does like:
 
 These look like `:hover` and would be used like `img:hover` and define properties under specific circumstances outlined by the pseudo-class. Hover determines what happens when a users mouse hovers over an item.
 
-[MDN Docs on :hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)
+**[MDN Docs on :hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)**
 
 A few other useful pseudo classes include `:hover` `:link` `:viewed` `:empty` `:in-range`
 
 ## Favicon
 
-The little image next to a website title is called a **favicon**. It can be up to 64x64. [What is a favicon](https://www.geeksforgeeks.org/what-is-favicon-and-what-is-the-size-of-it-in-html/)
+The little image next to a website title is called a **favicon**. It can be up to 64x64. **[What is a favicon](https://www.geeksforgeeks.org/what-is-favicon-and-what-is-the-size-of-it-in-html/)**
 
 :::tip
 
@@ -127,7 +127,7 @@ Looks like `margin: 'top' 'right' 'bottom' 'left'` so if you want to center hori
 
 ## Fonts
 
-Common free method is to use [Google Fonts](https://fonts.google.com/)
+Common free method is to use **[Google Fonts](https://fonts.google.com/)**
 
 ### Font Design Rules
 
@@ -160,7 +160,7 @@ Only use `float` when necessary. There are many edge cases.
 
 :::
 
-## Clear
+### Clear
 
 To prevent an element from following the float, use `clear: left;` or another side to cause it to not float for objects on that side.
 

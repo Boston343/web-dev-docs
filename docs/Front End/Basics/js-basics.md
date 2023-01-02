@@ -24,7 +24,7 @@ let variableName2 = 10; // local block scope
 const variableName3 = 10; // constants
 ```
 
-Further info [here](https://www.w3schools.com/js/js_variables.asp)
+Further info **[here](https://www.w3schools.com/js/js_variables.asp)**
 
 ## Useful Functions
 
@@ -87,7 +87,7 @@ if (track === "clear") {
 
 ## Checking Equality
 
-[MDN Docs on Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+**[MDN Docs on Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)**
 
 ## Array
 
@@ -211,7 +211,7 @@ var bellboy1 = new BellBoy("Timmy", 19);
 
 `setTimeout();` function. Delays execution of a function which is first argument to `setTimeout();`. The time is in milliseconds.
 
-Further details [here](https://www.tutorialspoint.com/How-to-delay-a-JavaScript-function-call-using-JavaScript)
+Further details **[here](https://www.tutorialspoint.com/How-to-delay-a-JavaScript-function-call-using-JavaScript)**
 
 ```js
 setTimeout(functionToCall, timeInMs);

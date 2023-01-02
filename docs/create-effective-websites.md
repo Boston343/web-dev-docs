@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Create Pretty Websites
+# Create Effective Websites
 
 How to make your website look and feel _gud_.
 

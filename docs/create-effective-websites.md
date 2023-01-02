@@ -10,30 +10,39 @@ How to make your website look and feel _gud_.
 
 ### Colors and Meaning
 
-- Red - love, energy, intensity
+Red - love, energy, intensity
 
-  - Ex. cars
+- Ex. cars
 
-- Yellow - joy, intellect, attention
-  - Ex. beach body
-- Green - freshness, safety, growth
-  - Ex. groceries, food
-- Blue - stability, trust, serenity
-  - Ex. finance, crypto
-- Purple - royalty, wealth, femininity
-  - Ex. payday loans, things for women
+Yellow - joy, intellect, attention
+
+- Ex. beach body
+
+Green - freshness, safety, growth
+
+- Ex. groceries, food
+
+Blue - stability, trust, serenity
+
+- Ex. finance, crypto
+
+Purple - royalty, wealth, femininity
+
+- Ex. payday loans, things for women
 
 ### Combining Colors
 
-- Two colors right next to each other on color wheel
+Two colors right next to each other on color wheel
 
-  - Nav bars, logo and background
-  - Doesn't stand out
+- Nav bars, logo and background
+- Doesn't stand out
 
-- Two colors opposite on color wheel
-  - Logos, icons
-  - Compliments - it **pops** and brings things out
-- Equilateral triangle, or square
+Two colors opposite on color wheel
+
+- Logos, icons
+- Compliments - it **pops** and brings things out
+
+Equilateral triangle, or square
 
 Color Resources:
 

@@ -111,7 +111,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} by Reap3r. Built with Docusaurus.`,
+        copyright: `Copyright © 2022 - ${new Date().getFullYear()} by Reap3r. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

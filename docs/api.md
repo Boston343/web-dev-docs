@@ -16,7 +16,7 @@ This has "/category" for different types of jokes.
 
 Can also have parameters which append `?contains=debugging` as an example to search for the word "debugging". Susequent queries are separated by "&"
 
-Ex. (https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw&contains=debugging)
+Ex. https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw&contains=debugging
 
 ### OpenWeather API
 
@@ -24,7 +24,7 @@ Ex. (https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw&contains=
 
 To test this you need an api key. An example below will require you to put in your api key after "appid=". If you click on the link now you can see the result of an invalid API key.
 
-Ex. (https://api.openweathermap.org/data/2.5/weather?q=Miami&units=imperial&appid=yourkeyhere)
+Ex. https://api.openweathermap.org/data/2.5/weather?q=Miami&units=imperial&appid=yourkeyhere
 
 ## API Useful Tools
 

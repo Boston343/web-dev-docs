@@ -57,7 +57,11 @@ function Feature({ Svg, title, description }) {
 
 function FeatureCard({ title, description }) {
   return (
-    <Card variant="outlined" sx={{ minWidth: 200, maxWidth: 400 }}>
+    <Card
+      color="primary"
+      variant="outlined"
+      sx={{ minWidth: 200, maxWidth: 400 }}
+    >
       <CardActionArea>
         <CardContent>
           <Typography>{title}</Typography>

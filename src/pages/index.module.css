@@ -9,6 +9,14 @@
   box-sizing: border-box;
 }
 
+/* a:hover {
+  color: red;
+} */
+
+.ifmHoverOverride:hover {
+  color: white;
+}
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;

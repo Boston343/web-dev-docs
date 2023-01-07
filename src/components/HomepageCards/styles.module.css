@@ -19,6 +19,6 @@
 .feature__cards {
 }
 
-a:hover {
+.ifmHoverOverride:hover {
   text-decoration: none;
 }

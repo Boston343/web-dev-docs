@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
+// import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
@@ -86,7 +86,11 @@ function FeatureCard({ title, icon, link, description }) {
           // bgcolor: "success.light",
         }}
       >
-        <CardActionArea href={link} sx={{ height: "100%" }}>
+        <CardActionArea
+          href={link}
+          sx={{ height: "100%" }}
+          className={styles.ifmHoverOverride}
+        >
           <CardContent>
             <Box sx={{ p: 1.5 }}>
               <IconContext.Provider value={{ size: 30 }}>

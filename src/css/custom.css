@@ -41,6 +41,13 @@
 }
 
 .footer--dark {
+  /* default */
+  /* --ifm-footer-background-color: hsl(218, 19%, 23%); */
+
+  /* what I like */
+  --ifm-footer-background-color: hsl(240, 5%, 22%);
+
+  /* Navbar dark color */
   /* --ifm-footer-background-color: hsl(210, 3%, 15%); */
 }
 

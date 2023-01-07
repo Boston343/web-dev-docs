@@ -108,19 +108,19 @@ Script - personal, creative, elegant
 
 #### Montserrat (sans serif)
 
-import montserrat from './montserrat.jpg';
+import montserrat from './img/montserrat.jpg';
 
 <img src={montserrat} alt="Montserrat Example" style={{width:350}}/>
 
 #### Noto Serif
 
-import notoSerif from './noto-serif.jpg';
+import notoSerif from './img/noto-serif.jpg';
 
 <img src={notoSerif} alt="Noto Serif Example" style={{width:350}}/>
 
 #### Open Sans
 
-import openSans from './open-sans.jpg';
+import openSans from './img/open-sans.jpg';
 
 <img src={openSans} alt="Open Sans Example" style={{width:350}}/>
 

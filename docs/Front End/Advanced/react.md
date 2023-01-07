@@ -349,6 +349,58 @@ function App() {
 }
 ```
 
+## Effects
+
+Another hook in react is the `useEffect` hook. It allows you to perform side effects in components, such as: fetching data, directly updating the DOM, and timers.
+
+**[w3schools documentation on useEffect](https://www.w3schools.com/react/react_useeffect.asp)**
+
+:::tip
+
+I have gotten an error before which I solved using the `useEffect` hook. It was related to this [StackOverflow post](https://stackoverflow.com/questions/62336340/cannot-update-a-component-while-rendering-a-different-component-warning). My solution is below. The error was related to `setMode(colorMode === "dark" ? "dark" : "light");` and said that a component cannot be updated while rendering a different component.
+
+```js
+function HomepageHeader() {
+  const { siteConfig } = useDocusaurusContext();
+
+  // colorMode holds the Docusaurus theme
+  const { colorMode } = useColorMode();
+
+  // MUI color mode setting
+  const { setMode } = useColorScheme();
+
+  // set Material UI theme based on Docusaurus theme
+  useEffect(() => {
+    // useEffect: https://www.w3schools.com/react/react_useeffect.asp
+    // added useEffect because I was getting an error https://stackoverflow.com/questions/62336340/cannot-update-a-component-while-rendering-a-different-component-warning
+    setMode(colorMode === "dark" ? "dark" : "light");
+  }, [colorMode]);
+
+  return (
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      <div className="container">
+        <h1 className="hero__title">{siteConfig.title}</h1>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={styles.buttons}>
+          <Button
+            // className={clsx("button", styles.btnSecondaryCustom)}
+            className="button"
+            size="large"
+            variant="contained"
+            href="/docs/intro"
+            color="secondary"
+          >
+            Docs
+          </Button>
+        </div>
+      </div>
+    </header>
+  );
+}
+```
+
+:::
+
 ## Conditional Rendering
 
 You can conditionally render within React using Ternary Operator & _AND_ Operator.

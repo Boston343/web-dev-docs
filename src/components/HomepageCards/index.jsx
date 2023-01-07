@@ -8,10 +8,48 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-const FeatureList = [
+const FeaturedDocs = [
+  {
+    title: "Front End Web Design Basics",
+    // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    icon: <></>,
+    link: "/docs/category/basics",
+    description: (
+      <>
+        The basics of building beautiful websites. HTML, CSS, Flexbox,
+        Javascript, JS DOM, and jQuery.
+      </>
+    ),
+  },
+  {
+    title: "React",
+    // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    icon: <></>,
+    link: "/docs/Front%20End/Advanced/react",
+    description: (
+      <>
+        React is a popular Javascript library for building user interfaces. It
+        was used to create this homepage, and used by Docusaurus!
+      </>
+    ),
+  },
+  {
+    title: "Security and Authentication",
+    // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    icon: <></>,
+    link: "/docs/security-and-authentication",
+    description: (
+      <>
+        Examples of encryption, hashing, salting, cookies, sessions, 0Auth, and
+        more.
+      </>
+    ),
+  },
   {
     title: "Databases",
     // Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    icon: <></>,
+    link: "/docs/category/databases",
     description: (
       <>
         A database is an organized collection of structured information or data,
@@ -19,29 +57,9 @@ const FeatureList = [
       </>
     ),
   },
-  {
-    title: "Focus on What Matters",
-    // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: "Powered by React",
-    // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
 ];
 
-function Feature({ Svg, title, description }) {
+function Feature({ title, description }) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
@@ -55,17 +73,19 @@ function Feature({ Svg, title, description }) {
   );
 }
 
-function FeatureCard({ title, description }) {
+function FeatureCard({ link, title, description }) {
   return (
     <Card
       color="primary"
       variant="outlined"
-      sx={{ minWidth: 200, maxWidth: 400 }}
+      sx={{ minWidth: 400, maxWidth: 400 }}
     >
-      <CardActionArea>
+      <CardActionArea href={link} sx={{ height: 250 }}>
         <CardContent>
-          <Typography>{title}</Typography>
-          <Typography>{description}</Typography>
+          <Typography gutterBottom variant="h5">
+            {title}
+          </Typography>
+          <Typography variant="body">{description}</Typography>
         </CardContent>
       </CardActionArea>
     </Card>
@@ -86,7 +106,7 @@ export default function HomepageCards() {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
+          {FeaturedDocs.map((props, idx) => (
             <FeatureCard key={idx} {...props} />
           ))}
         </div>

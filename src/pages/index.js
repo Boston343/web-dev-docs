@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -14,27 +14,7 @@ import { useColorMode } from "@docusaurus/theme-common";
 import styles from "./index.module.css";
 import { Button } from "@mui/material";
 
-import {
-  ThemeProvider,
-  createTheme,
-  useColorScheme,
-} from "@mui/material/styles";
-
-const theme = createTheme({
-  palette: {
-    mode: "dark",
-    primary: {
-      main: "hsl(240, 90%, 70%)",
-    },
-    secondary: {
-      main: "#fff",
-    },
-    background: {
-      paper: "hsl(240, 90%, 70%)",
-      // paper: "var(--mui-palette-background-paper)",
-    },
-  },
-});
+import { ThemeProvider, useColorScheme } from "@mui/material/styles";
 
 const exTheme = extendTheme({
   colorSchemes: {
@@ -70,12 +50,18 @@ const exTheme = extendTheme({
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
-  // get the Docusaurus theme
-  const { isDarkTheme } = useColorMode();
+  // colorMode holds the Docusaurus theme
+  const { colorMode } = useColorMode();
+
+  // MUI color mode setting
+  const { setMode } = useColorScheme();
 
   // set Material UI theme based on Docusaurus theme
-  const { setMode } = useColorScheme();
-  setMode(isDarkTheme ? "dark" : "light");
+  useEffect(() => {
+    // useEffect: https://www.w3schools.com/react/react_useeffect.asp
+    // added useEffect because I was getting an error https://stackoverflow.com/questions/62336340/cannot-update-a-component-while-rendering-a-different-component-warning
+    setMode(colorMode === "dark" ? "dark" : "light");
+  }, [colorMode]);
 
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
@@ -91,7 +77,7 @@ function HomepageHeader() {
             href="/docs/intro"
             color="secondary"
           >
-            Docs {isDarkTheme ? "Dark" : "Light"}
+            Docs
           </Button>
         </div>
       </div>
@@ -99,31 +85,10 @@ function HomepageHeader() {
   );
 }
 
-// function HomepageHeader() {
-//   const { siteConfig } = useDocusaurusContext();
-//   return (
-//     <header className={clsx("hero hero--primary", styles.heroBanner)}>
-//       <div className="container">
-//         <h1 className="hero__title">{siteConfig.title}</h1>
-//         <p className="hero__subtitle">{siteConfig.tagline}</p>
-//         <div className={styles.buttons}>
-//           <Link
-//             className="button button--secondary button--lg"
-//             to="/docs/intro"
-//           >
-//             Docs
-//           </Link>
-//         </div>
-//       </div>
-//     </header>
-//   );
-// }
-
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <>
-      {/* <ThemeProvider theme={theme}> */}
       <CssVarsProvider theme={exTheme}>
         <Layout
           title={`Reap3r ${siteConfig.title}`}
@@ -137,7 +102,6 @@ export default function Home() {
           </main>
         </Layout>
       </CssVarsProvider>
-      {/* </ThemeProvider> */}
     </>
   );
 }

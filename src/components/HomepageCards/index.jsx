@@ -6,13 +6,20 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import CardActionArea from "@mui/material/CardActionArea";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/system/Container";
+import { IconContext } from "react-icons";
+import { FaReact } from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
+import { BsShieldLock, BsServer } from "react-icons/bs";
+import { Box } from "@mui/system";
 
 const FeaturedDocs = [
   {
-    title: "Front End Web Design Basics",
+    title: "Front End Basics",
     // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    icon: <></>,
+    icon: <CgWebsite />,
     link: "/docs/category/basics",
     description: (
       <>
@@ -22,21 +29,33 @@ const FeaturedDocs = [
     ),
   },
   {
-    title: "React",
+    title: "Front End Advanced",
     // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    icon: <></>,
-    link: "/docs/Front%20End/Advanced/react",
+    icon: <FaReact />,
+    link: "/docs/category/advanced",
     description: (
       <>
-        React is a popular Javascript library for building user interfaces. It
-        was used to create this homepage, and used by Docusaurus!
+        React, Next.js, and various UI libraries like Material UI, Bootstrap,
+        and Tailwind CSS.
+      </>
+    ),
+  },
+  {
+    title: "Back End Design",
+    // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    icon: <BsServer />,
+    link: "/docs/category/back-end-web-design",
+    description: (
+      <>
+        Frameworks and tools to use for creating a website back end - such as
+        Node, Express, EJS, and Databases.
       </>
     ),
   },
   {
     title: "Security and Authentication",
     // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    icon: <></>,
+    icon: <BsShieldLock />,
     link: "/docs/security-and-authentication",
     description: (
       <>
@@ -48,7 +67,7 @@ const FeaturedDocs = [
   {
     title: "Databases",
     // Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-    icon: <></>,
+    icon: "",
     link: "/docs/category/databases",
     description: (
       <>
@@ -59,58 +78,39 @@ const FeaturedDocs = [
   },
 ];
 
-function Feature({ title, description }) {
+function FeatureCard({ title, icon, link, description }) {
   return (
-    <div className={clsx("col col--4")}>
-      <div className="text--center">
-        {/* <Svg className={styles.featureSvg} role="img" /> */}
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
-
-function FeatureCard({ link, title, description }) {
-  return (
-    <Card
-      color="primary"
-      variant="outlined"
-      sx={{ minWidth: 400, maxWidth: 400 }}
-    >
-      <CardActionArea href={link} sx={{ height: 250 }}>
-        <CardContent>
-          <Typography gutterBottom variant="h5">
-            {title}
-          </Typography>
-          <Typography variant="body">{description}</Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-
-    // <div className="card">
-    //   <div className="card__header">
-    //     <h3>{title}</h3>
-    //   </div>
-    //   <div className="card__body">
-    //     <p>{description}</p>
-    //   </div>
-    // </div>
+    <Grid item xs={12} sm={10} md={5} lg={4} maxWidth="sm">
+      <Card variant="outlined" sx={{ height: "100%", textAlign: "center" }}>
+        <CardActionArea href={link} sx={{ height: "100%" }}>
+          <CardContent>
+            <Box sx={{ p: 2 }}>
+              <IconContext.Provider value={{ size: 30 }}>
+                {icon}
+              </IconContext.Provider>
+            </Box>
+            <Typography gutterBottom variant="h5">
+              {title}
+            </Typography>
+            <Typography variant="body" color="text.secondary">
+              {description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Grid>
   );
 }
 
 export default function HomepageCards() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeaturedDocs.map((props, idx) => (
-            <FeatureCard key={idx} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
+    <Container maxWidth="lg">
+      <h1>Documentation Quick Links</h1>
+      <Grid container spacing={{ xs: 2, md: 3 }} justifyContent="center">
+        {FeaturedDocs.map((props, idx) => (
+          <FeatureCard key={idx} {...props} />
+        ))}
+      </Grid>
+    </Container>
   );
 }

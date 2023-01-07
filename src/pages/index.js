@@ -45,6 +45,15 @@ const exTheme = extendTheme({
       },
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 800, // changed this to match Docusaurus
+      lg: 1000,
+      xl: 1536,
+    },
+  },
 });
 
 function HomepageHeader() {

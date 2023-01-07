@@ -3,7 +3,11 @@
  * and scoped locally.
  */
 
-@import "../css/custom.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .heroBanner {
   padding: 4rem 0;

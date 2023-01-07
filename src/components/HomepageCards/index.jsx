@@ -16,6 +16,9 @@ import { CgWebsite } from "react-icons/cg";
 import { BsShieldLock, BsServer } from "react-icons/bs";
 import { SiGraphql } from "react-icons/si";
 
+//-------------------------------------------------------------------
+//                    Array for Featured Cards
+//-------------------------------------------------------------------
 const FeaturedDocs = [
   {
     title: "Front End Basics",
@@ -56,8 +59,8 @@ const FeaturedDocs = [
     link: "/docs/category/databases",
     description: (
       <>
-        Application Programming Interfaces allow applications to talk to each
-        other.
+        Applications commonly use REST or GraphQL APIs to allow applications to
+        talk to each other.
       </>
     ),
   },
@@ -74,6 +77,9 @@ const FeaturedDocs = [
   },
 ];
 
+//-------------------------------------------------------------------
+//                    Feature Card Component
+//-------------------------------------------------------------------
 function FeatureCard({ title, icon, link, description }) {
   return (
     <Grid item xs={12} sm={10} md={5} lg={4} maxWidth="sm">
@@ -110,6 +116,9 @@ function FeatureCard({ title, icon, link, description }) {
   );
 }
 
+//-------------------------------------------------------------------
+//                  Homepage Cards Component
+//-------------------------------------------------------------------
 export default function HomepageCards() {
   return (
     <Container maxWidth="lg">

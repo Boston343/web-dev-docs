@@ -1,23 +1,26 @@
 import React, { useEffect } from "react";
 import clsx from "clsx";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageCards from "@site/src/components/HomepageCards";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { useColorMode } from "@docusaurus/theme-common";
 
 import {
   Experimental_CssVarsProvider as CssVarsProvider,
   experimental_extendTheme as extendTheme,
 } from "@mui/material/styles";
-import { useColorMode } from "@docusaurus/theme-common";
-
 import styles from "./index.module.css";
 import Typography from "@mui/material/Typography";
-// import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid";
 import Container from "@mui/system/Container";
 import Box from "@mui/system/Box";
 import Button from "@mui/material/Button";
 import { useColorScheme } from "@mui/material/styles";
 
+//-------------------------------------------------------------------
+//                        MUI Theme
+//-------------------------------------------------------------------
+// General MUI theme
 const extTheme = extendTheme({
   colorSchemes: {
     light: {
@@ -38,7 +41,7 @@ const extTheme = extendTheme({
       palette: {
         primary: {
           main: "hsl(240, 90%, 70%)",
-          dark: "hsl(240, 90%, 65%)",
+          dark: "hsl(240, 90%, 63%)",
         },
         secondary: {
           main: "#fff",
@@ -69,6 +72,37 @@ const extTheme = extendTheme({
   },
 });
 
+//-------------------------------------------------------------------
+// Theme for the blog button specifically
+const btnTheme = extendTheme({
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.vars.palette.primary.main,
+          borderWidth: 1,
+          borderStyle: "solid",
+          "&:hover": {
+            backgroundColor: theme.vars.palette.primary.main,
+            color: "white",
+          },
+          // [theme.breakpoints.up("sm")]: {
+          //   marginRight: "1rem",
+          //   marginBottom: 0,
+          // },
+          // ["@media (min-width: 350px)"]: {
+          //   marginRight: "1rem",
+          //   marginBottom: 0,
+          // },
+        }),
+      },
+    },
+  },
+});
+
+//-------------------------------------------------------------------
+//                  Homepage Header Component
+//-------------------------------------------------------------------
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
@@ -98,27 +132,49 @@ function HomepageHeader() {
         }}
       >
         <Container sx={{ textAlign: "center" }}>
-          <Typography mb={2} variant="h2">
+          <Typography fontWeight={"500"} mb={2} variant="h2">
             {siteConfig.title}
           </Typography>
           <Typography mb={4} variant="h5">
             {siteConfig.tagline}
           </Typography>
-          <Button
-            className={styles.ifmHoverOverride}
-            size="large"
-            variant="contained"
-            href="/docs/intro"
-            color="primary"
-          >
-            Documentation
-          </Button>
+
+          <Grid container spacing={{ xs: 2 }} justifyContent="center">
+            <Grid item>
+              <CssVarsProvider theme={btnTheme}>
+                <Button
+                  // className={styles.buttonBlog}
+                  size="large"
+                  variant="outlined"
+                  href="/blog"
+                  color="primary"
+                >
+                  Blog
+                </Button>
+              </CssVarsProvider>
+            </Grid>
+
+            <Grid item>
+              <Button
+                className={styles.ifmHoverOverride}
+                size="large"
+                variant="contained"
+                href="/docs/intro"
+                color="primary"
+              >
+                Documentation
+              </Button>
+            </Grid>
+          </Grid>
         </Container>
       </Box>
     </header>
   );
 }
 
+//-------------------------------------------------------------------
+//                      Home Component
+//-------------------------------------------------------------------
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (

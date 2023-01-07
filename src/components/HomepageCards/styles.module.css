@@ -18,3 +18,7 @@
 
 .feature__cards {
 }
+
+a:hover {
+  text-decoration: none;
+}

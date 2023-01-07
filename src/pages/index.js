@@ -27,7 +27,7 @@ const exTheme = extendTheme({
           main: "#fff",
         },
         background: {
-          // paper: "hsl(240, 48%, 47%)",
+          paper: "hsl(240, 30%, 95%)",
         },
       },
     },
@@ -40,7 +40,7 @@ const exTheme = extendTheme({
           main: "#fff",
         },
         background: {
-          // paper: "hsl(240, 90%, 70%)",
+          paper: "hsl(210, 3%, 15%)",
         },
       },
     },

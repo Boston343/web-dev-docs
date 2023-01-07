@@ -4,21 +4,21 @@ import styles from "./styles.module.css";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/system/Container";
+import Box from "@mui/system/Box";
+
 import { IconContext } from "react-icons";
 import { FaReact } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import { BsShieldLock, BsServer } from "react-icons/bs";
-import { Box } from "@mui/system";
+import { SiGraphql } from "react-icons/si";
 
 const FeaturedDocs = [
   {
     title: "Front End Basics",
-    // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     icon: <CgWebsite />,
     link: "/docs/category/basics",
     description: (
@@ -30,7 +30,6 @@ const FeaturedDocs = [
   },
   {
     title: "Front End Advanced",
-    // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     icon: <FaReact />,
     link: "/docs/category/advanced",
     description: (
@@ -42,7 +41,6 @@ const FeaturedDocs = [
   },
   {
     title: "Back End Design",
-    // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     icon: <BsServer />,
     link: "/docs/category/back-end-web-design",
     description: (
@@ -53,8 +51,18 @@ const FeaturedDocs = [
     ),
   },
   {
-    title: "Security and Authentication",
-    // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    title: "APIs",
+    icon: <SiGraphql />,
+    link: "/docs/category/databases",
+    description: (
+      <>
+        Application Programming Interfaces allow application to talk to each
+        other.
+      </>
+    ),
+  },
+  {
+    title: "Security and Auth",
     icon: <BsShieldLock />,
     link: "/docs/security-and-authentication",
     description: (
@@ -64,27 +72,23 @@ const FeaturedDocs = [
       </>
     ),
   },
-  {
-    title: "Databases",
-    // Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-    icon: "",
-    link: "/docs/category/databases",
-    description: (
-      <>
-        A database is an organized collection of structured information or data,
-        typically stored electronically in a computer system.
-      </>
-    ),
-  },
 ];
 
 function FeatureCard({ title, icon, link, description }) {
   return (
     <Grid item xs={12} sm={10} md={5} lg={4} maxWidth="sm">
-      <Card variant="outlined" sx={{ height: "100%", textAlign: "center" }}>
+      <Card
+        variant="outlined"
+        sx={{
+          height: "100%",
+          textAlign: "center",
+          boxShadow: 3,
+          // bgcolor: "success.light",
+        }}
+      >
         <CardActionArea href={link} sx={{ height: "100%" }}>
           <CardContent>
-            <Box sx={{ p: 2 }}>
+            <Box sx={{ p: 1.5 }}>
               <IconContext.Provider value={{ size: 30 }}>
                 {icon}
               </IconContext.Provider>
@@ -105,8 +109,15 @@ function FeatureCard({ title, icon, link, description }) {
 export default function HomepageCards() {
   return (
     <Container maxWidth="lg">
-      <h1>Documentation Quick Links</h1>
-      <Grid container spacing={{ xs: 2, md: 3 }} justifyContent="center">
+      <Box sx={{ paddingTop: 4, paddingBottom: 2, textAlign: "center" }}>
+        <Typography variant="h4">Documentation Quick Links</Typography>
+      </Box>
+      <Grid
+        container
+        spacing={{ xs: 2, md: 3 }}
+        justifyContent="center"
+        sx={{ paddingBottom: 4 }}
+      >
         {FeaturedDocs.map((props, idx) => (
           <FeatureCard key={idx} {...props} />
         ))}

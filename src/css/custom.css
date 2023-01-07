@@ -28,7 +28,12 @@
   --ifm-color-primary-light: hsl(240, 90%, 75%);
   --ifm-color-primary-lighter: hsl(240, 90%, 80%);
   --ifm-color-primary-lightest: hsl(240, 90%, 85%);
+  --ifm-color-primary-lightest: hsl(240, 90%, 85%);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.footer--dark {
+  /* --ifm-footer-background-color: hsl(210, 3%, 15%); */
 }
 
 /* Import the below JSON into colorbox.io

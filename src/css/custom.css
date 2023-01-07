@@ -5,7 +5,15 @@
  */
 
 /* You can override the default Infima variables here. */
+
+/* Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+
+/* Roboto */
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"); */
+
 :root {
+  font-family: "Open Sans", Roboto, "Helvetica Neue", Arial, sans-serif;
   --ifm-color-primary: hsl(240, 48%, 47%);
   --ifm-link-color: hsl(240, 60%, 50%);
   --ifm-color-primary-dark: hsl(240, 48%, 42%);
@@ -16,6 +24,7 @@
   --ifm-color-primary-lightest: hsl(240, 48%, 64%);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* --ifm-font-family-base: "Open Sans"; */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */

@@ -142,6 +142,19 @@ class Question extends React.Component {
 }
 ```
 
+### Resizing React Icons
+
+You can use `IconContext.Provider` to resize icons. Example below.
+
+```js
+import { IconContext } from "react-icons";
+import { FaBeer } from "react-icons/fa";
+
+<IconContext.Provider value={{ size: 50 }}>
+  <FaBeer />
+</IconContext.Provider>;
+```
+
 ## Font Awesome
 
 Font Awesome is a collection of a ton of icons for free use (and more paid). Search through the icons **[here](https://fontawesome.com/search)**.

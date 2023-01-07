@@ -3,8 +3,8 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import HomepageCards from "@site/src/components/HomepageCards";
+
 import {
   Experimental_CssVarsProvider as CssVarsProvider,
   experimental_extendTheme as extendTheme,
@@ -12,11 +12,15 @@ import {
 import { useColorMode } from "@docusaurus/theme-common";
 
 import styles from "./index.module.css";
-import { Button } from "@mui/material";
-
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Container from "@mui/system/Container";
+import Box from "@mui/system/Box";
+import Button from "@mui/material/Button";
 import { ThemeProvider, useColorScheme } from "@mui/material/styles";
+import { blue } from "@mui/material/colors";
 
-const exTheme = extendTheme({
+const extTheme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
@@ -27,7 +31,7 @@ const exTheme = extendTheme({
           main: "#fff",
         },
         background: {
-          paper: "hsl(240, 30%, 95%)",
+          paper: "hsl(240, 15%, 95%)",
         },
       },
     },
@@ -49,10 +53,19 @@ const exTheme = extendTheme({
     values: {
       xs: 0,
       sm: 600,
-      md: 800, // changed this to match Docusaurus
-      lg: 1000,
+      md: 800, // changed this to match Docusaurus (default 900)
+      lg: 1000, // also changed this (default 1200)
       xl: 1536,
     },
+  },
+  typography: {
+    fontFamily: [
+      "'Open Sans'",
+      "Roboto",
+      "'Helvetica Neue'",
+      "Arial",
+      "sans-serif",
+    ].join(","),
   },
 });
 
@@ -73,24 +86,53 @@ function HomepageHeader() {
   }, [colorMode]);
 
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+    <header>
+      <Box
+        sx={{
+          paddingTop: 8,
+          paddingBottom: 8,
+          backgroundColor: "background.paper",
+          borderTop: 1,
+          borderBottom: 1,
+          borderColor: "primary.main",
+        }}
+      >
+        <Container sx={{ textAlign: "center" }}>
+          <Typography mb={2} variant="h2">
+            {siteConfig.title}
+          </Typography>
+          <Typography mb={4} variant="h5">
+            {siteConfig.tagline}
+          </Typography>
           <Button
-            // className={clsx("button", styles.btnSecondaryCustom)}
-            className="button"
             size="large"
             variant="contained"
             href="/docs/intro"
-            color="secondary"
+            color="primary"
           >
-            Docs
+            Documentation
           </Button>
-        </div>
-      </div>
+        </Container>
+      </Box>
     </header>
+    // <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    //   <div className="container">
+    //     <h1 className="hero__title">{siteConfig.title}</h1>
+    //     <p className="hero__subtitle">{siteConfig.tagline}</p>
+    //     <div className={styles.buttons}>
+    //       <Button
+    //         // className={clsx("button", styles.btnSecondaryCustom)}
+    //         className="button"
+    //         size="large"
+    //         variant="contained"
+    //         href="/docs/intro"
+    //         color="secondary"
+    //       >
+    //         Docs
+    //       </Button>
+    //     </div>
+    //   </div>
+    // </header>
   );
 }
 
@@ -98,7 +140,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <>
-      <CssVarsProvider theme={exTheme}>
+      <CssVarsProvider theme={extTheme}>
         <Layout
           title={`Reap3r ${siteConfig.title}`}
           description="Documentation on web development tips, tools, and techniques. By Reap3r"

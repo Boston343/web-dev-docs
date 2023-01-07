@@ -56,7 +56,7 @@ const FeaturedDocs = [
     link: "/docs/category/databases",
     description: (
       <>
-        Application Programming Interfaces allow application to talk to each
+        Application Programming Interfaces allow applications to talk to each
         other.
       </>
     ),
@@ -109,14 +109,14 @@ function FeatureCard({ title, icon, link, description }) {
 export default function HomepageCards() {
   return (
     <Container maxWidth="lg">
-      <Box sx={{ paddingTop: 4, paddingBottom: 2, textAlign: "center" }}>
+      <Box sx={{ paddingTop: 8, paddingBottom: 4, textAlign: "center" }}>
         <Typography variant="h4">Documentation Quick Links</Typography>
       </Box>
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
         justifyContent="center"
-        sx={{ paddingBottom: 4 }}
+        sx={{ paddingBottom: 8 }}
       >
         {FeaturedDocs.map((props, idx) => (
           <FeatureCard key={idx} {...props} />

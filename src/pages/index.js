@@ -20,7 +20,6 @@ import { useColorScheme } from "@mui/material/styles";
 //-------------------------------------------------------------------
 //                        MUI Theme
 //-------------------------------------------------------------------
-// import theme from "@site/src/pages/mui-theme";
 import theme from "@site/src/components/MuiTheme";
 
 //-------------------------------------------------------------------
@@ -56,19 +55,6 @@ const btnTheme = extendTheme({
 //-------------------------------------------------------------------
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
-
-  // colorMode holds the Docusaurus theme
-  const { colorMode } = useColorMode();
-
-  // MUI color mode setting
-  const { setMode } = useColorScheme();
-
-  // set Material UI theme based on Docusaurus theme
-  useEffect(() => {
-    // useEffect: https://www.w3schools.com/react/react_useeffect.asp
-    // added useEffect because I was getting an error https://stackoverflow.com/questions/62336340/cannot-update-a-component-while-rendering-a-different-component-warning
-    setMode(colorMode === "dark" ? "dark" : "light");
-  }, [colorMode]);
 
   return (
     <header>
@@ -134,18 +120,16 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <>
-      <CssVarsProvider theme={theme}>
-        <Layout
-          title={`Reap3r ${siteConfig.title}`}
-          description="Documentation on web development tips, tools, and techniques. By Reap3r"
-          // description="Description will go into a meta tag in <head />"
-        >
-          <HomepageHeader />
-          <main>
-            <HomepageCards />
-          </main>
-        </Layout>
-      </CssVarsProvider>
+      <Layout
+        title={`Reap3r ${siteConfig.title}`}
+        description="Documentation on web development tips, tools, and techniques. By Reap3r"
+        // description="Description will go into a meta tag in <head />"
+      >
+        <HomepageHeader />
+        <main>
+          <HomepageCards />
+        </main>
+      </Layout>
     </>
   );
 }

@@ -49,7 +49,7 @@ npm install @mui/material @emotion/react @emotion/styled
 
 Once installed you can use the MUI components and other tools like normal. Import them, and use them in your `.jsx` and `.mdx` code. I used them to style the homepage.
 
-```jsx
+```jsx title="example.jsx"
 import Container from "@mui/system/Container";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
@@ -70,31 +70,11 @@ import Typography from "@mui/material/Typography";
 </Grid>;
 ```
 
-<Grid container justifyContent="center" sx={{ paddingBottom: 8 }}>
-  <Grid item xs={12}>
-    <Card
-      variant="outlined"
-      sx={{
-        textAlign: "center",
-        boxShadow: 3,
-      }}
-    >
-      <Typography variant="h4">This is an example</Typography>
-    </Card>
-  </Grid>
-</Grid>
-
-Try changing the color theme using the Docusaurus button. Notice how the above example does not change color depending on which color theme is chosen? Let's fix that.
-
-## Matching Docusaurus and MUI Theme
-
-This was the fun part. I wanted to be able to make the MUI components update theme along with Docusaurus.
-
-### Material UI CSS Theme Variables
+## Material UI CSS Theme Variables
 
 For integrating MUI theme with Docusaurus, I opted for using the MUI experimental [CSS Theme Variables](https://mui.com/material-ui/experimental-api/css-theme-variables/overview/). It allows you to create both your light and dark colors in the same theme, and switch between them using MUIs `setMode` from `useColorScheme`.
 
-### Create MUI Color Theme
+## Create MUI Color Theme
 
 I first created my color scheme in a file I named `index.jsx` at `/src/components/MuiTheme/index.jsx`. Like MUIs `createTheme`, you only need to specify the variables you wish to change from default. A simplified theme is below.
 
@@ -109,12 +89,18 @@ const extTheme = extendTheme({
         primary: {
           main: "hsl(240, 48%, 47%)",
         },
+        background: {
+          paper: "hsl(240, 15%, 95%)",
+        },
       },
     },
     dark: {
       palette: {
         primary: {
           main: "hsl(240, 90%, 70%)",
+        },
+        background: {
+          paper: "hsl(210, 3%, 15%)",
         },
       },
     },
@@ -124,72 +110,73 @@ const extTheme = extendTheme({
 export default extTheme;
 ```
 
-### Docusaurus useColorMode
+## Applying MUI Theme to Site
 
-One of the important pieces of information we need from Docusaurus, is what the current color theme is. In order to get this, we can use the Docusaurus provided hook [useColorMode](https://docusaurus.io/docs/api/themes/configuration/#use-color-mode).
+We need to import the MUI theme, and wrap it around the entire website. This can be done by [swizzing](https://docusaurus.io/docs/swizzling#wrapper-your-site-with-root) the `<Root>`. Then make your `Root.js` look like below.
 
-An important bit of information in their docs is that the component which calls `useColorMode` must be a child of the `Layout` component.
-
-:::info
-
-This by default is inside the `Home` component at `/src/pages/index.js`
-
-:::
-
-### Syncing the Themes
-
-First, we need to import them MUI theme, and wrap it around the `Layout` component.
-
-```jsx title="index.js"
-import Layout from "@theme/Layout";
-// import your created theme
+```jsx title="/src/theme/Root.js"
+import React from "react";
+import { getInitColorSchemeScript } from "@mui/material/styles";
+import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
 import theme from "@site/src/components/MuiTheme";
 
-export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
+export default function Root({ children }) {
   return (
     <>
-      <CssVarsProvider theme={theme}>
-        <Layout
-          title={`Reap3r ${siteConfig.title}`}
-          description="Documentation on web development tips, tools, and techniques. By Reap3r"
-          // description="Description will go into a meta tag in <head />"
-        >
-          <HomepageHeader />
-          <main>
-            <HomepageCards />
-          </main>
-        </Layout>
-      </CssVarsProvider>
+      {getInitColorSchemeScript()}
+      <CssVarsProvider theme={theme}>{children}</CssVarsProvider>
     </>
   );
 }
 ```
 
-Then inside `HomepageHeader`, we can access the Docusaurus color mode, and use it to switch the MUI color theme.
+## Matching Docusaurus and MUI Theme
 
-```jsx title="index.js"
-function HomepageHeader() {
-  // colorMode holds the Docusaurus theme
-  const { colorMode } = useColorMode();
+Now we need to be able to determine what color mode Docusaurus is in, and sync that with our MUI theme.
 
+### Swizzling ColorModeToggle
+
+In order to match the color schemes, I made use of Docusaurus' swizzling feature again, to wrap their `ColorModeToggle` and add my own functionality. This component is labeled "Safe" to swizzle, and wrapping is the best option. See the Docusaurus docs on **[Swizzling](https://docusaurus.io/docs/swizzling)** if you want more information about this functionality.
+
+In short, the command I ran was:
+
+```bash
+npm run swizzle @docusaurus/theme-classic ColorModeToggle -- --wrap
+```
+
+This creates the ColorModeToggle wrapper at `/src/theme/ColorModeToggle/index.js`.
+
+### Syncing the Themes
+
+Then inside the ColorModeToggle `index.js` you can add the mode switching functionality.
+
+```jsx title="/src/theme/ColorModeToggle/index.js"
+import React from "react";
+import ColorModeToggle from "@theme-original/ColorModeToggle";
+import { useColorScheme } from "@mui/material/styles";
+
+export default function ColorModeToggleWrapper(props) {
   // MUI color mode setting
   const { setMode } = useColorScheme();
 
-  // set Material UI theme based on Docusaurus theme
-  useEffect(() => {
-    // useEffect: https://www.w3schools.com/react/react_useeffect.asp
-    // added useEffect because I was getting an error https://stackoverflow.com/questions/62336340/cannot-update-a-component-while-rendering-a-different-component-warning
-    setMode(colorMode === "dark" ? "dark" : "light");
-  }, [colorMode]);
+  // "value" holds the color theme. Either "light" or "dark"
+  const { value } = props;
 
-  return <header> your themed MUI components here... </header>;
+  // change mode based on "value" prop
+  // "dark" or "light" are also used for MUI
+  setMode(value);
+
+  return (
+    <>
+      <ColorModeToggle {...props} />
+    </>
+  );
 }
 ```
 
 ## Using MUI Them Elsewhere
 
-Now that the themes sync, we can use that synced theme anywhere on the site! Including this blog section. All we need to do is import our theme, and wrap items in `<CssVarsProvider>`. You can even reference your theme variables from within the components. Below I added using the `primary.main` color for the text (which changes between dark and light mode).
+Now that the themes sync, we can use that synced theme anywhere on the site! Including this docs and blog section. Since the entire site is wrapped in `Root.js`, no extra steps are needed. You can even reference your theme variables from within the components. Below I added using the `primary.main` color for the text (which changes between dark and light mode).
 
 ```jsx title="This blog post"
 import Container from "@mui/system/Container";
@@ -199,42 +186,38 @@ import Typography from "@mui/material/Typography";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
 import theme from "@site/src/components/MuiTheme";
 
-<CssVarsProvider theme={theme}>
-  <Grid container justifyContent="center" sx={{ paddingBottom: 8 }}>
-    <Grid item xs={12}>
-      <Card
-        variant="outlined"
-        sx={{
-          textAlign: "center",
-          boxShadow: 3,
-        }}
-      >
-        <Typography variant="h4">This is an example</Typography>
-      </Card>
-    </Grid>
+<Grid container justifyContent="center" sx={{ paddingBottom: 4 }}>
+  <Grid item xs={12}>
+    <Card
+      variant="outlined"
+      sx={{
+        textAlign: "center",
+        boxShadow: 3,
+      }}
+    >
+      <Typography variant="h4">This is an example</Typography>
+    </Card>
   </Grid>
-</CssVarsProvider>;
+</Grid>;
 ```
 
-<CssVarsProvider theme={theme}>
-  <Grid container justifyContent="center" sx={{ paddingBottom: 8 }}>
-    <Grid item xs={12}>
-      <Card
-        variant="outlined"
-        sx={{
-          textAlign: "center",
-          boxShadow: 3,
-        }}
-      >
-        <Typography variant="h4" sx={{ color: "primary.main" }}>
-          This is an example
-        </Typography>
-      </Card>
-    </Grid>
+<Grid container justifyContent="center" sx={{ paddingBottom: 4 }}>
+  <Grid item xs={12}>
+    <Card
+      variant="outlined"
+      sx={{
+        textAlign: "center",
+        boxShadow: 3,
+      }}
+    >
+      <Typography variant="h4" sx={{ color: "primary.main" }}>
+        This is an example
+      </Typography>
+    </Card>
   </Grid>
-</CssVarsProvider>
+</Grid>
 
-Now try changing the color theme using the Docusaurus button. Notice how the above example **DOES** change color depending on which color theme is chosen?
+Try changing the color theme using the Docusaurus button. Notice how the above example changes color depending on which color theme is chosen?
 
 import meme2 from "./theme-synced.jpg";
 

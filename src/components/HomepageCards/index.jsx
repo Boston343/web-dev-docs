@@ -56,7 +56,7 @@ const FeaturedDocs = [
   {
     title: "APIs",
     icon: <SiGraphql />,
-    link: "/docs/category/databases",
+    link: "/docs/api",
     description: (
       <>
         Applications commonly use REST or GraphQL APIs to allow applications to

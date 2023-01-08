@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "QR Web Dev",
   tagline: "Quick reference for web development tips, tools, and techniques.",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://qr-web-dev.netlify.app",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",

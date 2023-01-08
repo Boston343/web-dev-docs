@@ -20,57 +20,7 @@ import { useColorScheme } from "@mui/material/styles";
 //-------------------------------------------------------------------
 //                        MUI Theme
 //-------------------------------------------------------------------
-// General MUI theme
-const extTheme = extendTheme({
-  colorSchemes: {
-    light: {
-      palette: {
-        primary: {
-          main: "hsl(240, 48%, 47%)",
-          dark: "hsl(240, 48%, 38%)",
-        },
-        secondary: {
-          main: "#fff",
-        },
-        background: {
-          paper: "hsl(240, 15%, 95%)",
-        },
-      },
-    },
-    dark: {
-      palette: {
-        primary: {
-          main: "hsl(240, 90%, 70%)",
-          dark: "hsl(240, 90%, 63%)",
-        },
-        secondary: {
-          main: "#fff",
-        },
-        background: {
-          paper: "hsl(210, 3%, 15%)",
-        },
-      },
-    },
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 800, // changed this to match Docusaurus (default 900)
-      lg: 1000, // also changed this (default 1200)
-      xl: 1536,
-    },
-  },
-  typography: {
-    fontFamily: [
-      "'Open Sans'",
-      "Roboto",
-      "'Helvetica Neue'",
-      "Arial",
-      "sans-serif",
-    ].join(","),
-  },
-});
+import theme from "./mui-theme";
 
 //-------------------------------------------------------------------
 // Theme for the blog button specifically
@@ -179,7 +129,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <>
-      <CssVarsProvider theme={extTheme}>
+      <CssVarsProvider theme={theme}>
         <Layout
           title={`Reap3r ${siteConfig.title}`}
           description="Documentation on web development tips, tools, and techniques. By Reap3r"

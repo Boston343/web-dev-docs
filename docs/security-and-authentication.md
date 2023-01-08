@@ -187,14 +187,26 @@ While implementing this I ran into issues testing. It seems like you _MUST_ have
 
 :::
 
+## Authentication Example Project
+
+**[This](https://reap3r-secrets.glitch.me/)** is an example project I made using salting, hashing, and OAuth. You can test out the registration and login, although the 0Auth is limited to test accounts.
+
+Code can be found **[here](https://github.com/Boston343/Secrets)**.
+
+Below is what the database entries look like for the app:
+
+import secretsDB from './img/secrets_db.jpg';
+
+<img src={secretsDB} alt="Secrets DB Entries" style={{width:900}}/>
+
 ## Other Authentication Resources
 
-Node.js passport login system tutorial (36 min) [here](https://www.youtube.com/watch?v=-RCnNyD0L-s)
+Node.js passport login system tutorial (36 min) [here](https://www.youtube.com/watch?v=-RCnNyD0L-s).
 
-Local authentication using passport in Node.js (docs) [here](https://www.sitepoint.com/local-authentication-using-passport-node-js/)
+Local authentication using passport in Node.js (docs) [here](https://www.sitepoint.com/local-authentication-using-passport-node-js/).
 
-User authentication in web apps with passport, node, express (6 hours) [here](https://www.youtube.com/watch?v=F-sFp_AvHc8)
+User authentication in web apps with passport, node, express (6 hours) [here](https://www.youtube.com/watch?v=F-sFp_AvHc8).
 
-User authentication with passport and express 4 (docs) [here](https://mherman.org/blog/local-authentication-with-passport-and-express-4/)
+User authentication with passport and express 4 (docs) [here](https://mherman.org/blog/local-authentication-with-passport-and-express-4/).
 
-Permissions / access control in web apps (docs) [here](https://wasp-lang.dev/blog/2022/11/29/permissions-in-web-apps)
+Permissions / access control in web apps (docs) [here](https://wasp-lang.dev/blog/2022/11/29/permissions-in-web-apps).

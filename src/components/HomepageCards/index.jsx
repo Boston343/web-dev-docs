@@ -70,7 +70,7 @@ const FeaturedDocs = [
     link: "/docs/security-and-authentication",
     description: (
       <>
-        Examples of encryption, hashing, salting, cookies, sessions, 0Auth, and
+        Examples of encryption, hashing, salting, cookies, sessions, OAuth, and
         more.
       </>
     ),

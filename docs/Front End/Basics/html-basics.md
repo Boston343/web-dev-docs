@@ -14,7 +14,7 @@ Good documentation on HTML can be found here: **[HTML MDN Docs](https://develope
 
 ## HTML Cheatsheet
 
-import HTMLCheatsheet from '@site/static/img/HTML_Cheatsheet.JPG';
+import HTMLCheatsheet from '@site/static/img/html_cheatsheet.jpg';
 
 <img src={HTMLCheatsheet} alt="HTML Cheetsheet" style={{width:800}}/>
 

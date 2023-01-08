@@ -20,7 +20,8 @@ import { useColorScheme } from "@mui/material/styles";
 //-------------------------------------------------------------------
 //                        MUI Theme
 //-------------------------------------------------------------------
-import theme from "./mui-theme";
+// import theme from "@site/src/pages/mui-theme";
+import theme from "@site/src/components/MuiTheme";
 
 //-------------------------------------------------------------------
 // Theme for the blog button specifically

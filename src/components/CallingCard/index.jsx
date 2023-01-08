@@ -15,20 +15,25 @@ export default function CallingCard() {
     <CssVarsProvider theme={theme}>
       <Box
         sx={{
-          paddingTop: 5,
-          paddingBottom: 5,
+          paddingTop: 4,
+          paddingBottom: 4,
           backgroundColor: "background.paper",
-          borderTop: 5,
-          borderBottom: 5,
-          borderColor: "primary.main",
+          borderTop: 3,
+          borderBottom: 3,
+          // borderImage: "linear-gradient(to right, blue, red)",
+          borderImage: "linear-gradient(to right, #8e2de2, #4a00e0)",
+          borderImageSlice: 1,
         }}
       >
         <Grid container justifyContent="center">
           <Grid item xs={12}>
             <Typography
-              variant="h2"
+              variant="h3"
               fontWeight="700"
-              sx={{ color: "primary.main", textAlign: "center" }}
+              sx={{
+                color: "primary.main",
+                textAlign: "center",
+              }}
             >
               Go forth and do great things.
             </Typography>

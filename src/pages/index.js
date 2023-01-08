@@ -76,9 +76,13 @@ function HomepageHeader() {
           paddingTop: 8,
           paddingBottom: 8,
           backgroundColor: "background.paper",
-          borderTop: 1,
-          borderBottom: 1,
-          borderColor: "primary.main",
+
+          borderTop: 3,
+          borderBottom: 3,
+          // borderColor: "primary.main",
+          // borderImage: "linear-gradient(to right, blue, red)",
+          borderImage: "linear-gradient(to right, #8e2de2, #4a00e0)",
+          borderImageSlice: 1,
         }}
       >
         <Container sx={{ textAlign: "center" }}>

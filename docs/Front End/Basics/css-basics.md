@@ -146,7 +146,7 @@ Percentages and `em` inherets from parent. Using `rem` instead of `em` allows yo
 
 ## CSS Units
 
-import CSSUnits from '@site/static/img/CSS Units.png';
+import CSSUnits from './img/css_units.png';
 
 <img src={CSSUnits} alt="CSS Units" style={{width:600}}/>
 

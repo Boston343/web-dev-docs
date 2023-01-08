@@ -96,9 +96,9 @@ For integrating MUI theme with Docusaurus, I opted for using the MUI experimenta
 
 ### Create MUI Color Theme
 
-I first created my color scheme in a file I named `mui-theme.jsx`. Like MUIs `createTheme`, you only need to specify the variables you wish to change from default. A simplified theme is below.
+I first created my color scheme in a file I named `index.jsx` at `/src/components/MuiTheme/index.jsx`. Like MUIs `createTheme`, you only need to specify the variables you wish to change from default. A simplified theme is below.
 
-```jsx title="/src/pages/mui-theme.jsx"
+```jsx title="/src/components/MuiTheme/index.jsx"
 import { experimental_extendTheme as extendTheme } from "@mui/material/styles";
 
 // General MUI theme
@@ -143,7 +143,7 @@ First, we need to import them MUI theme, and wrap it around the `Layout` compone
 ```jsx title="index.js"
 import Layout from "@theme/Layout";
 // import your created theme
-import theme from "./mui-theme";
+import theme from "@site/src/components/MuiTheme";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -197,7 +197,7 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
-import theme from "@site/src/pages/mui-theme";
+import theme from "@site/src/components/MuiTheme";
 
 <CssVarsProvider theme={theme}>
   <Grid container justifyContent="center" sx={{ paddingBottom: 8 }}>

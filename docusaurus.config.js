@@ -60,6 +60,12 @@ const config = {
         respectPrefersColorScheme: true,
       },
       // metasdata: [{}],
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+          hideable: true,
+        },
+      },
       navbar: {
         title: "QR Web Dev",
         logo: {

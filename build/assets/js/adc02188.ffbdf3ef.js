@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4127],{4384:a=>{a.exports=JSON.parse('{"label":"dark mode","permalink":"/blog/tags/dark-mode","allTagsPath":"/blog/tags","count":1}')}}]);

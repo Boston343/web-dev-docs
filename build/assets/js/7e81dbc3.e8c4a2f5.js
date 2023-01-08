@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[5617],{5228:s=>{s.exports=JSON.parse('{"label":"light mode","permalink":"/blog/tags/light-mode","allTagsPath":"/blog/tags","count":1}')}}]);

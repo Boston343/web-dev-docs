@@ -195,7 +195,7 @@ Code can be found **[here](https://github.com/Boston343/Secrets)**.
 
 Below is what the database entries look like for the app:
 
-import secretsDB from './img/secrets_db.jpg';
+import secretsDB from '@site/static/img/secrets_db.jpg';
 
 <img src={secretsDB} alt="Secrets DB Entries" style={{width:900}}/>
 

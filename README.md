@@ -1,6 +1,6 @@
 # web-dev-docs
 
-My personal notes taken while learning web development.
+My personal notes taken while learning web development. Site can be accessed **[HERE](https://qr-web-dev.netlify.app/)**
 
 ## Website
 

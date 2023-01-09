@@ -114,7 +114,7 @@ export default extTheme;
 
 ## Applying MUI Theme to Site
 
-We need to import the MUI theme, and wrap it around the entire website. This can be done by [swizzing](https://docusaurus.io/docs/swizzling#wrapper-your-site-with-root) the `<Root>`. Then make your `Root.js` look like below.
+We need to import the MUI theme, and wrap it around the entire website. This can be done by [swizzing](https://docusaurus.io/docs/swizzling#wrapper-your-site-with-root) the `<Root>`. For this, we simply create a file `Root.js` at `/src/theme/Root.js`. Then place the below code in that file.
 
 ```jsx title="/src/theme/Root.js"
 import React from "react";
@@ -166,7 +166,9 @@ export default function ColorModeToggleWrapper(props) {
 
   // change mode based on "value" prop
   // "dark" or "light" are also used for MUI
-  setMode(value);
+  useEffect(() => {
+    setMode(value);
+  }, [value]);
 
   return (
     <>

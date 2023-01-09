@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+// const githubLogo = require("./static/img/github.svg");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -43,6 +44,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/Boston343/web-dev-docs",
+          blogSidebarCount: 5,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -74,6 +76,7 @@ const config = {
       },
       navbar: {
         title: "Web Reaper Docs",
+        hideOnScroll: true,
         logo: {
           alt: "Reaper",
           // src: "img/logo.svg",
@@ -88,10 +91,19 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/Boston343/web-dev-docs",
-            label: "GitHub",
+            // href: "https://github.com/Boston343/web-dev-docs",
+            // label: "GitHub",
+            // "aria-label": "GitHub repository",
             position: "right",
+            type: "html",
+            value:
+              "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item navbar__link navbar__item-github' target='_blank' rel='noopener noreferrer' aria-lable='Github repository'></a>",
           },
+          // <img src='./static/img/github.svg' alt='Github'/>
+          // {
+          //   type: "search",
+          //   position: "right",
+          // },
         ],
       },
       footer: {

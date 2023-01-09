@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ColorModeToggle from "@theme-original/ColorModeToggle";
 import { useColorScheme } from "@mui/material/styles";
 
@@ -11,7 +11,9 @@ export default function ColorModeToggleWrapper(props) {
 
   // change mode based on "value" prop
   // "dark" or "light" are also used for MUI
-  setMode(value);
+  useEffect(() => {
+    setMode(value);
+  }, [value]);
 
   return (
     <>

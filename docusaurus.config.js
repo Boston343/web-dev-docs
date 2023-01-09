@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "QR Web Dev",
+  title: "Web Reaper Docs",
   tagline: "Quick reference for web development tips, tools, and techniques.",
-  url: "https://qr-web-dev.netlify.app",
+  url: "https://webreaper.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Reap3r", // Usually your GitHub org/user name.
-  projectName: "QR Web Dev", // Usually your repo name.
+  organizationName: "Web Reaper", // Usually your GitHub org/user name.
+  projectName: "Docs", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -59,7 +59,13 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      // metasdata: [{}],
+      metadata: [
+        {
+          name: "keywords",
+          content:
+            "docusaurus, material ui, website, development, coding, react, html, css, javascript, jquery, oauth, bootstrap, node, express, ejs, database, mongodb, mongoose, rest, graphql, hashing, salting, cookies, sessions",
+        },
+      ],
       docs: {
         sidebar: {
           autoCollapseCategories: true,
@@ -67,9 +73,9 @@ const config = {
         },
       },
       navbar: {
-        title: "QR Web Dev",
+        title: "Web Reaper Docs",
         logo: {
-          alt: "Reap3r",
+          alt: "Reaper",
           // src: "img/logo.svg",
           src: "img/favicon-32x32.png",
         },
@@ -123,7 +129,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2022 - ${new Date().getFullYear()} by Reap3r. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} by Reap3r. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

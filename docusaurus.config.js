@@ -97,9 +97,8 @@ const config = {
             position: "right",
             type: "html",
             value:
-              "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item navbar__link navbar__item-github' target='_blank' rel='noopener noreferrer' aria-lable='Github repository'></a>",
+              "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item-github navbar__item navbar__link' target='_blank' rel='noopener noreferrer' aria-lable='Github repository'></a>",
           },
-          // <img src='./static/img/github.svg' alt='Github'/>
           // {
           //   type: "search",
           //   position: "right",
@@ -119,20 +118,20 @@ const config = {
             ],
           },
           {
-            title: "Community",
+            title: "Blog",
             items: [
               {
-                label: "Twitter",
-                href: "https://twitter.com/LastChaos343",
+                label: "Material UI with Docusaurus",
+                href: "/blog/material-ui-theme-with-docusaurus",
               },
             ],
           },
           {
-            title: "More",
+            title: "External",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
+                label: "Twitter",
+                href: "https://twitter.com/LastChaos343",
               },
               {
                 label: "GitHub",
@@ -141,7 +140,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} by Reap3r. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Web Reaper`,
       },
       prism: {
         theme: lightCodeTheme,

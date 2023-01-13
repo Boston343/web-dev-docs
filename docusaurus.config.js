@@ -6,6 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 // const githubLogo = require("./static/img/github.svg");
 
 /** @type {import('@docusaurus/types').Config} */
+
+require("dotenv").config();
+
 const config = {
   title: "Web Reaper Docs",
   tagline: "Quick reference for web development tips, tools, and techniques.",
@@ -19,6 +22,20 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Web Reaper", // Usually your GitHub org/user name.
   projectName: "Docs", // Usually your repo name.
+
+  plugins: [
+    [
+      "docusaurus2-dotenv",
+      {
+        path: "./.env",
+        safe: false,
+        systemvars: false,
+        silent: false,
+        expand: false,
+        defaults: false,
+      },
+    ],
+  ],
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -56,6 +73,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // algolia: {
+      //   // https://docusaurus.io/docs/search
+      //   appId: "process.env.ALGOLIA_APP_ID",
+      //   apiKey: process.env.ALGOLIA_API_KEY,
+      //   indexName: "example",
+      //   contextualSearch: true,
+      //   searchParameters: {},
+      //   searchPagePath: "search",
+      // },
       colorMode: {
         defaultMode: "dark",
         disableSwitch: false,

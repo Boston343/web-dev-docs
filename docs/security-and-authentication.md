@@ -173,11 +173,11 @@ The _Access Token_ is what we can use to access data from people on that applica
 
 Passport requires a `findorcreate` function to work with your DB. With MongoDB and Mongoose this is a useful package **[mongoose-findorcreate](https://www.npmjs.com/package/mongoose-findorcreate)**.
 
-### 6a. Google OAuth 2.0 Authentication
+#### 6a. Google OAuth 2.0 Authentication
 
 For this, use Passport strategy **[passport-google-oauth20](https://www.passportjs.org/packages/passport-google-oauth20/)**.
 
-### 6b. Facebook 0Auth 2.0 Authentication
+#### 6b. Facebook OAuth 2.0 Authentication
 
 For this, use Passport strategy **[passport-facebook](https://www.passportjs.org/packages/passport-facebook/)**.
 

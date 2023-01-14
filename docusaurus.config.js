@@ -106,7 +106,9 @@ const config = {
         logo: {
           alt: "Reaper",
           // src: "img/logo.svg",
-          src: "img/favicon-32x32.png",
+          src: "img/favicon.ico",
+          width: 32,
+          height: 32,
         },
         items: [
           {

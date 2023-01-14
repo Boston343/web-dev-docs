@@ -29,7 +29,8 @@
     "react-icons": "^4.7.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "2.2.0"
+    "@docusaurus/module-type-aliases": "2.2.0",
+    "@netlify/plugin-lighthouse": "^4.0.3"
   },
   "browserslist": {
     "production": [

@@ -123,7 +123,7 @@ const config = {
             position: "right",
             type: "html",
             value:
-              "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item-github navbar__item navbar__link' target='_blank' rel='noopener noreferrer' aria-lable='Github repository'></a>",
+              "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item-github navbar__item navbar__link' target='_blank' rel='noopener noreferrer' aria-label='Github repository'></a>",
           },
           // {
           //   type: "search",

@@ -10,25 +10,13 @@ How to make your website look and feel _gud_.
 
 ### Colors and Meaning
 
-Red - love, energy, intensity
-
-- Ex. cars
-
-Yellow - joy, intellect, attention
-
-- Ex. beach body
-
-Green - freshness, safety, growth
-
-- Ex. groceries, food
-
-Blue - stability, trust, serenity
-
-- Ex. finance, crypto
-
-Purple - royalty, wealth, femininity
-
-- Ex. payday loans, things for women
+| Color  |           Meaning           |            Example             |
+| :----: | :-------------------------: | :----------------------------: |
+|  red   |  love, engergy, intensity   |              cars              |
+| yellow | joy, intellect, attenction  |           beach body           |
+| green  |  freshness, safety, growth  |        groceries, food         |
+|  blue  | stability, trust, serenity  |        finance, crypto         |
+| purple | royalty, wealth, femininity | payday loans, things for women |
 
 ### Combining Colors
 
@@ -44,16 +32,13 @@ Two colors opposite on color wheel
 
 Equilateral triangle, or square
 
-Color Resources:
+#### Color Resources:
 
-- https://colorhunt.co/
-- https://color.adobe.com/create/color-wheel
+https://colorhunt.co/
+
+https://color.adobe.com/create/color-wheel
 
 ## Typography
-
-**[How to choose a font](https://fonts.google.com/knowledge/choosing_type/emotive_considerations_for_choosing_typefaces)**
-
-**[Good font list](https://kinsta.com/blog/best-google-fonts/)**
 
 :::tip
 
@@ -62,6 +47,10 @@ You want to pick fonts with a similar mood and time era.
 You want to contrast serif-ness and weights.
 
 :::
+
+**[How to choose a font](https://fonts.google.com/knowledge/choosing_type/emotive_considerations_for_choosing_typefaces)**
+
+**[Good font list](https://kinsta.com/blog/best-google-fonts/)**
 
 ### Serif and Sans-serif
 

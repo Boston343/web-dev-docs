@@ -54,13 +54,13 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Boston343/web-dev-docs",
+          editUrl: "https://github.com/Boston343/web-dev-docs/blob/main",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Boston343/web-dev-docs",
+          editUrl: "https://github.com/Boston343/web-dev-docs/blob/main",
           blogSidebarCount: 5,
         },
         theme: {
@@ -123,7 +123,7 @@ const config = {
             position: "right",
             type: "html",
             value:
-              "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item-github navbar__item navbar__link' target='_blank' rel='noopener noreferrer' aria-lable='Github repository'></a>",
+              "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item-github navbar__item navbar__link' target='_blank' rel='noopener noreferrer' aria-label='Github repository'></a>",
           },
           // {
           //   type: "search",

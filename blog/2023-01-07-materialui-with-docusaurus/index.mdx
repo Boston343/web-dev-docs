@@ -1,8 +1,9 @@
 ---
-title: "Guide: Using Material UI with Docusaurus"
+title: "How to use Material UI with Docusaurus"
 slug: material-ui-theme-with-docusaurus
 description: Guide to using Material UI theme with Docusaurus, and syncing the color mode.
 authors: [reap3r]
+image: https://raw.githubusercontent.com/Boston343/web-dev-docs/main/blog/2023-01-07-materialui-with-docusaurus/materialui-with-docusaurus.jpg
 tags:
   [
     material ui,
@@ -31,8 +32,21 @@ This blog post explains how to add Material UI to Docusaurus, use the MUI compon
 
 import meme from "./materialui-with-docusaurus.jpg";
 
-<div style={{ textAlign: "center" }}>
-  <img src={meme} alt="Docusaurus with MUI meme" style={{ width: 500 }} />
+<div
+  style={{
+    textAlign: "center",
+  }}
+>
+  <img
+    src={meme}
+    alt="Docusaurus with MUI meme"
+    style={{
+      width: "100%",
+      height: "auto",
+      aspectRatio: "500/364",
+      maxWidth: 500,
+    }}
+  />
 </div>
 
 <!--truncate-->
@@ -227,8 +241,21 @@ Try changing the color theme using the Docusaurus button. Notice how the above e
 
 import meme2 from "./theme-synced.jpg";
 
-<div style={{ textAlign: "center" }}>
-  <img src={meme2} alt="Theme synced meme" style={{ width: 500 }} />
+<div
+  style={{
+    textAlign: "center",
+  }}
+>
+  <img
+    src={meme2}
+    alt="Theme Synced Meme"
+    style={{
+      width: "100%",
+      height: "auto",
+      aspectRatio: "500/364",
+      maxWidth: 500,
+    }}
+  />
 </div>
 
 ## Further Documentation

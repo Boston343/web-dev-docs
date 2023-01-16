@@ -32,7 +32,11 @@ This blog post explains how to add Material UI to Docusaurus, use the MUI compon
 import meme from "./materialui-with-docusaurus.jpg";
 
 <div style={{ textAlign: "center" }}>
-  <img src={meme} alt="Docusaurus with MUI meme" style={{ width: 500 }} />
+  <img
+    src={meme}
+    alt="Docusaurus with MUI meme"
+    style={{ height: 364, width: "auto", loading: "eager" }}
+  />
 </div>
 
 <!--truncate-->
@@ -228,7 +232,11 @@ Try changing the color theme using the Docusaurus button. Notice how the above e
 import meme2 from "./theme-synced.jpg";
 
 <div style={{ textAlign: "center" }}>
-  <img src={meme2} alt="Theme synced meme" style={{ width: 500 }} />
+  <img
+    src={meme2}
+    alt="Theme synced meme"
+    style={{ height: 364, width: "auto" }}
+  />
 </div>
 
 ## Further Documentation

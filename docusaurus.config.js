@@ -122,10 +122,16 @@ const config = {
             // href: "https://github.com/Boston343/web-dev-docs",
             // label: "GitHub",
             // "aria-label": "GitHub repository",
+
+            href: "https://github.com/Boston343/web-dev-docs",
             position: "right",
-            type: "html",
-            value:
-              "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item-github navbar__item navbar__link' target='_blank' rel='noopener noreferrer' aria-label='Github repository'></a>",
+            className: "navbar__item-github",
+            "aria-label": "GitHub repository",
+
+            // position: "right",
+            // type: "html",
+            // value:
+            //   "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item-github navbar__item navbar__link' target='_blank' rel='noopener noreferrer' aria-label='Github repository'></a>",
           },
           // {
           //   type: "search",

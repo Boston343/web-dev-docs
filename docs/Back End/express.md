@@ -8,7 +8,7 @@ sidebar_position: 2
 
 :::caution
 
-This requires **[Node](node)** installed and setup.
+This requires **[Node](/docs/Back%20End/node)** installed and setup.
 
 :::
 

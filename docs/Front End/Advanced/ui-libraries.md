@@ -52,6 +52,12 @@ const theme = createTheme({
 
 You then wrap your application (or the specific components desired) with a `<ThemeProvider theme={theme}>` component.
 
+:::tip
+
+For combining the Material UI and Docusaurus themes, see this [blog post](/blog/material-ui-theme-with-docusaurus/)!
+
+:::
+
 ### Material Icons Usage
 
 Search for the icons you want **[here](https://mui.com/material-ui/material-icons/)**.

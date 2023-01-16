@@ -16,6 +16,7 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
+  trailingSlash: true,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -116,7 +117,7 @@ const config = {
             position: "left",
             label: "Documentation",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog/", label: "Blog", position: "left" },
           {
             href: "https://github.com/Boston343/web-dev-docs",
             position: "right",
@@ -146,7 +147,7 @@ const config = {
             items: [
               {
                 label: "Material UI with Docusaurus",
-                href: "/blog/material-ui-theme-with-docusaurus",
+                href: "/blog/material-ui-theme-with-docusaurus/",
               },
             ],
           },

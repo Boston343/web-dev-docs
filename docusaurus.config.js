@@ -3,7 +3,6 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-// const githubLogo = require("./static/img/github.svg");
 
 /** @type {import('@docusaurus/types').Config} */
 
@@ -119,19 +118,10 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            // href: "https://github.com/Boston343/web-dev-docs",
-            // label: "GitHub",
-            // "aria-label": "GitHub repository",
-
             href: "https://github.com/Boston343/web-dev-docs",
             position: "right",
             className: "navbar__item-github",
             "aria-label": "GitHub repository",
-
-            // position: "right",
-            // type: "html",
-            // value:
-            //   "<a href='https://github.com/Boston343/web-dev-docs' class='navbar__item-github navbar__item navbar__link' target='_blank' rel='noopener noreferrer' aria-label='Github repository'></a>",
           },
           // {
           //   type: "search",
@@ -165,7 +155,7 @@ const config = {
             items: [
               {
                 label: "Twitter",
-                href: "https://twitter.com/LastChaos343",
+                href: "https://twitter.com/BowTiedWebReapr",
               },
               {
                 label: "GitHub",

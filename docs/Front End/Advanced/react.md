@@ -54,7 +54,7 @@ This function can only render one HTML object, so just wrap everything in a `<di
 
 Wrap expressions (including vars) in curly braces like `{var}`
 
-```js
+```jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
 const name = "Reap3r";
@@ -66,7 +66,7 @@ root.render(<h1>Hello {name}!</h1>);
 
 You can add css classes inside react.
 
-```js
+```jsx
 // in css have a ".heading"
 root.render(<h1 className="heading">Hello {name}!</h1>;
 ```
@@ -75,7 +75,7 @@ root.render(<h1 className="heading">Hello {name}!</h1>;
 
 Use camel case for attributes, This is _NOT_ like normal HTML where it is all lowercase.
 
-```js
+```jsx
 // normal HTML uses "contenteditable", react is different
 root.render(<h1 contentEditable="true">Hello {name}!</h1>;
 ```
@@ -84,7 +84,7 @@ root.render(<h1 contentEditable="true">Hello {name}!</h1>;
 
 This is useful to update styling based on changes (user input, etc) within react.
 
-```js
+```jsx
 const customStyle = {
   color: "red",
   fontSize: "20px",
@@ -106,14 +106,14 @@ Every component (and its file) should start with a capital letter. Ex. component
 
 Before hooks, they were setup like:
 
-```js
+```jsx
 // ClassName is a "React component class" or "React component type"
 class ClassName extends React.Component { render() {details here} }
 ```
 
 Functional components with hooks can be setup like:
 
-```js
+```jsx
 import React from "react";
 import "./App.css";
 
@@ -134,7 +134,7 @@ Components can take parameters, called "props" (short for "properties"), and ret
 
 These "props" are how you can pass properties to components.
 
-```js
+```jsx
 // copmponent with "name" and "email" props
 function Card(props) {
   return (
@@ -155,7 +155,7 @@ Most react devs use a special syntax called _JSX_ which makes these structures e
 
 Example of component in a separate file. It can be imported with line `import List from "./components/List";`
 
-```js title="List.jsx"
+```jsx title="List.jsx"
 import React from "react";
 
 function List() {
@@ -179,7 +179,7 @@ In HTML, form elements such as `<input>` and `<textarea>` typically maintain the
 
 We combine the two by making the react state the "single source of truth".
 
-```js
+```jsx
 function App() {
   const [name, setName] = React.useState("");
 
@@ -217,7 +217,7 @@ Setup like `const [stateKey, setStateKeyFunction] = React.useState('');`
 
 In the above, `stateKey` is used to access the state variable. Then `setStateKeyFunction( newValue )` sets the "stateKey" to "newValue".
 
-```js
+```jsx
 import React from "react";
 
 function App() {
@@ -257,7 +257,7 @@ React components can have a state by setting `this.state` in their constructors.
 
 All React components with a constructor should start with a `super(props)` call.
 
-```js
+```jsx
 class Square extends React.Component {
   constructor(props) {
     super(props);
@@ -293,7 +293,7 @@ You cannot access event.target.name (or anything 'event') from within a stateful
 
 :::
 
-```js
+```jsx
 function App() {
   const [fullName, setFullName] = React.useState({
     fName: "",
@@ -359,7 +359,7 @@ Another hook in react is the `useEffect` hook. It allows you to perform side eff
 
 I have gotten an error before which I solved using the `useEffect` hook. It was related to this [StackOverflow post](https://stackoverflow.com/questions/62336340/cannot-update-a-component-while-rendering-a-different-component-warning). My solution is below. The error was related to `setMode(colorMode === "dark" ? "dark" : "light");` and said that a component cannot be updated while rendering a different component.
 
-```js
+```jsx
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
@@ -409,7 +409,7 @@ You can conditionally render within React using Ternary Operator & _AND_ Operato
 
 Ternary is useful for doing conditional checks for rendering elements.
 
-```js
+```jsx
 function App() {
   return (
     <div className="container">{isLoggedIn ? <h1>Hello</h1> : <Login />}</div>
@@ -421,7 +421,7 @@ function App() {
 
 _AND_ is useful for doing conditional checks for rendering elements, if the false case is a `null`. This works because JS only evaluates the second part of an `&&` expression if the first part is true. Otherwise it is ignored to save time.
 
-```js
+```jsx
 // instead of  {currentTime > 12 ? <h1>Why are you still working?</h1> : null}
 // you can use {currentTime > 12 && <h1>Why are you still working?</h1>}
 const currentTime = new Date().getHours();
@@ -442,7 +442,7 @@ Forms are used very often. These are some useful things you can do.
 
 Getting info from an input in real time, use `event`. In the below example, we have an input which you can add `onChange={handleChangeFunction}`
 
-```js
+```jsx
 function handleChangeFunction(event) {
   // event is passed automatically
   console.log(event.target.value); // gives you the value of what is inside the input every time a change is made
@@ -455,7 +455,7 @@ function handleChangeFunction(event) {
 
 When you submit a form, by default it refreshes the page. If you want to stop this you can use `event.preventDefault()`.
 
-```js
+```jsx
 function App() {
   const [name, setName] = React.useState("");
   const [submittedName, setSubmittedName] = React.useState("");
@@ -497,7 +497,7 @@ You can pass functions to the child, and you can use those functions as the chil
 
 [Example 2](https://codesandbox.io/s/managing-a-component-tree-practice-forked-sj60k8?file=/src/components/InputArea.jsx)
 
-```js title="ToDoItem.jsx"
+```jsx title="ToDoItem.jsx"
 import React from "react";
 
 function ToDoItem(props) {

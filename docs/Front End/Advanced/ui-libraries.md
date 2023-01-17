@@ -36,7 +36,7 @@ Color picker tool **[here](https://m2.material.io/resources/color/#!/?view.left=
 
 **[Documentation](https://mui.com/material-ui/customization/theming/)** on how to use themes. You create a theme and define whatever you want to change from the Material UI default theme.
 
-```js
+```jsx
 // changes only the default primary color
 // dark and light colors can be set individually
 // or Material UI will auto calculate appropriate values
@@ -64,7 +64,7 @@ Search for the icons you want **[here](https://mui.com/material-ui/material-icon
 
 Import the specific icons you want like:
 
-```js
+```jsx
 import DeleteIcon from "@mui/icons-material/Delete";
 ```
 
@@ -133,15 +133,14 @@ npm install react-icons --save
 
 ### React Icons Usage
 
-```js
+```jsx
 import { FaBeer } from "react-icons/fa";
 
 class Question extends React.Component {
   render() {
     return (
       <h3>
-        {" "}
-        Lets go for a <FaBeer />?{" "}
+        Lets go for a <FaBeer />?
       </h3>
     );
   }
@@ -152,7 +151,7 @@ class Question extends React.Component {
 
 You can use `IconContext.Provider` to resize icons. Example below.
 
-```js
+```jsx
 import { IconContext } from "react-icons";
 import { FaBeer } from "react-icons/fa";
 

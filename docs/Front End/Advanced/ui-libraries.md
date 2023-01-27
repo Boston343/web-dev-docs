@@ -10,7 +10,7 @@ This page also has a few other useful libraries that I have used.
 
 ## Material UI
 
-**[Material UI](https://mui.com/material-ui/getting-started/overview/)** is an open-source React component library that implements Google's Material Design.
+[Material UI](https://mui.com/material-ui/getting-started/overview/) is an open-source React component library that implements Google's Material Design.
 
 ### MUI Installation
 
@@ -28,13 +28,13 @@ npm install @mui/icons-material
 
 ### MUI Colors
 
-You can set the colors that Material UI can use in components. See the **[documentation](https://mui.com/material-ui/customization/color/)**.
+You can set the colors that Material UI can use in components. See the [documentation](https://mui.com/material-ui/customization/color/).
 
-Color picker tool **[here](https://m2.material.io/resources/color/#!/?view.left=0&view.right=0)**.
+Color picker tool [here](https://m2.material.io/resources/color/#!/?view.left=0&view.right=0).
 
 ### MUI Theme
 
-**[Documentation](https://mui.com/material-ui/customization/theming/)** on how to use themes. You create a theme and define whatever you want to change from the Material UI default theme.
+[Documentation](https://mui.com/material-ui/customization/theming/) on how to use themes. You create a theme and define whatever you want to change from the Material UI default theme.
 
 ```jsx
 // changes only the default primary color
@@ -60,7 +60,7 @@ For combining the Material UI and Docusaurus themes, see this [blog post](/blog/
 
 ### Material Icons Usage
 
-Search for the icons you want **[here](https://mui.com/material-ui/material-icons/)**.
+Search for the icons you want [here](https://mui.com/material-ui/material-icons/).
 
 Import the specific icons you want like:
 
@@ -76,7 +76,7 @@ Then you use it as a react component:
 
 ## Bootstrap
 
-**[Bootstrap](https://getbootstrap.com/)** is a frontend toolkit. Build and customize with Sass, utilize prebuild grid system and components, and bring projects to life with powerful JavaScript plugins.
+[Bootstrap](https://getbootstrap.com/) is a frontend toolkit. Build and customize with Sass, utilize prebuild grid system and components, and bring projects to life with powerful JavaScript plugins.
 
 ### Bootstrap Installation
 
@@ -98,7 +98,7 @@ You can either download the source files for Bootstrap, or you can use a CDN to 
 
 ## Tailwind CSS
 
-**[Tailwind CSS](https://tailwindcss.com/)** is a utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center`, and `rotate-90` that can be composed to build any design, directly in your markup.
+[Tailwind CSS](https://tailwindcss.com/) is a utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center`, and `rotate-90` that can be composed to build any design, directly in your markup.
 
 It is highly customizable. You can style each component on your website as the Tailwind UI demands from it.
 
@@ -123,7 +123,7 @@ IMHO - Tailwind is probably better for front-end dev specifically, while Bootstr
 
 Arguably better icons than MUI icons. They are also imported as React components.
 
-Search for icons using the searchbar **[here](https://react-icons.github.io/react-icons/)**.
+Search for icons using the searchbar [here](https://react-icons.github.io/react-icons/).
 
 ### React Icons Installation
 
@@ -162,9 +162,9 @@ import { FaBeer } from "react-icons/fa";
 
 ## Font Awesome
 
-Font Awesome is a collection of a ton of icons for free use (and more paid). Search through the icons **[here](https://fontawesome.com/search)**.
+Font Awesome is a collection of a ton of icons for free use (and more paid). Search through the icons [here](https://fontawesome.com/search).
 
-To use in your website, create a kit on their page **[here](https://fontawesome.com/kits)**, then open the kit and put the _Kit Code_ into the `<head>` of your HTML.
+To use in your website, create a kit on their page [here](https://fontawesome.com/kits), then open the kit and put the _Kit Code_ into the `<head>` of your HTML.
 
 It will look something like:
 

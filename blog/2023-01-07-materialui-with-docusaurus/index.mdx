@@ -2,19 +2,9 @@
 title: "How to use Material UI with Docusaurus"
 slug: material-ui-theme-with-docusaurus
 description: Guide to using Material UI theme with Docusaurus, and syncing the color mode.
-authors: [reap3r]
+authors: [Reaper]
 image: https://raw.githubusercontent.com/Boston343/web-dev-docs/main/blog/2023-01-07-materialui-with-docusaurus/materialui-with-docusaurus.jpg
-tags:
-  [
-    material ui,
-    material,
-    mui,
-    docusaurus,
-    cssvarsprovider,
-    theme,
-    dark mode,
-    light mode,
-  ]
+tags: [material ui, material, mui, docusaurus, cssvarsprovider, theme]
 ---
 
 import Container from "@mui/system/Container";
@@ -148,7 +138,7 @@ Now we need to be able to determine what color mode Docusaurus is in, and sync t
 
 ### Swizzling ColorModeToggle
 
-In order to match the color schemes, I made use of Docusaurus' swizzling feature again, to wrap their `ColorModeToggle` and add my own functionality. This component is labeled "Safe" to swizzle, and wrapping is the best option. See the Docusaurus docs on **[Swizzling](https://docusaurus.io/docs/swizzling)** if you want more information about this functionality.
+In order to match the color schemes, I made use of Docusaurus' swizzling feature again, to wrap their `ColorModeToggle` and add my own functionality. This component is labeled "Safe" to swizzle, and wrapping is the best option. See the Docusaurus docs on [Swizzling](https://docusaurus.io/docs/swizzling) if you want more information about this functionality.
 
 In short, the command I ran was:
 
@@ -252,7 +242,7 @@ import meme2 from "./theme-synced.jpg";
 
 ## Further Documentation
 
-For further details on MUIs CSS theme variables, see their **[documentation](https://mui.com/material-ui/experimental-api/css-theme-variables/customization/)**
+For further details on MUIs CSS theme variables, see their [documentation](https://mui.com/material-ui/experimental-api/css-theme-variables/customization/).
 
 import CallingCard from "@site/src/components/CallingCard";
 

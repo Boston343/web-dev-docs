@@ -21,7 +21,7 @@ mongoose.connect("mongodb://localhost:27017/fruitsDB", {
 
 ## Mongoose CRUD
 
-`insertMany()` and other model function **[here](https://mongoosejs.com/docs/api/model.html)**.
+`insertMany()` and other model function [here](https://mongoosejs.com/docs/api/model.html).
 
 ### CREATE
 
@@ -71,7 +71,7 @@ Fruit.find((err, fruits) => {
 
 ### DATA VALIDATION
 
-**[docs](https://mongoosejs.com/docs/validation.html)**
+[link](https://mongoosejs.com/docs/validation.html)
 
 ```js
 const fruitSchema = new mongoose.Schema({
@@ -91,7 +91,7 @@ const fruitSchema = new mongoose.Schema({
 
 ### UPDATE
 
-**[docs](https://mongoosejs.com/docs/api/model.html#model_Model-update)**
+[link](https://mongoosejs.com/docs/api/model.html#model_Model-update)
 
 ```js
 // update the rating of "banana" to 9
@@ -106,7 +106,7 @@ Fruit.updateOne({ name: "banana" }, { rating: 9 }, (err) => {
 
 ### DELETE
 
-**[docs](https://mongoosejs.com/docs/api/model.html#model_Model-deleteOne)**
+[link](https://mongoosejs.com/docs/api/model.html#model_Model-deleteOne)
 
 `Model.deleteOne()` or `deleteMany()`
 
@@ -149,7 +149,7 @@ const amy = new Person({
 
 ## Example Project
 
-For an example project, see TodoList **[code](https://github.com/Boston343/TodoList)**.
+For an example project, see TodoList [code](https://github.com/Boston343/TodoList).
 
 ```js title="TodoList: app.js"
 // npm and express includes

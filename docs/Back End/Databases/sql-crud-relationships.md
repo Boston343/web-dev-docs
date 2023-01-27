@@ -12,7 +12,7 @@ How to perform CRUD operations and use relationships with SQL.
 
 Used to create a new table in a database.
 
-**[w3schools docs on CREATE TABLE](https://www.w3schools.com/sql/sql_create_table.asp)**
+[w3schools docs on CREATE TABLE](https://www.w3schools.com/sql/sql_create_table.asp)
 
 `PRIMARY KEY` is a unique identifier for table.
 
@@ -33,7 +33,7 @@ CREATE TABLE products (
 
 Used to insert new records in a table.
 
-**[w3schools docs on INSERT INTO](https://www.w3schools.com/sql/sql_insert.asp)**
+[w3schools docs on INSERT INTO](https://www.w3schools.com/sql/sql_insert.asp)
 
 Examples:
 
@@ -51,7 +51,7 @@ VALUES (2, "Pencil");
 
 Used to select data from a database. The data returned is stored in a result table, called the result-set.
 
-**[w3schools docs on SELECT](https://www.w3schools.com/sql/sql_select.asp)**
+[w3schools docs on SELECT](https://www.w3schools.com/sql/sql_select.asp)
 
 Get specific columns with `SELECT * FROM products` or `SELECT name, price FROM products`.
 
@@ -67,7 +67,7 @@ SELECT name, price FROM products WHERE name="Pen";
 
 Used to modify the existing records in a table.
 
-**[w3schools docs on UPDATE](https://www.w3schools.com/sql/sql_update.asp)**
+[w3schools docs on UPDATE](https://www.w3schools.com/sql/sql_update.asp)
 
 :::danger
 
@@ -85,7 +85,7 @@ UPDATE products SET price = 1.3 WHERE name = "Pen";
 
 Used to add, delete, or modify columns in an existing table. Also used to add and drop various constraints on an existing table.
 
-**[w3schools docs on ALTER TABLE](https://www.w3schools.com/sql/sql_alter.asp)**
+[w3schools docs on ALTER TABLE](https://www.w3schools.com/sql/sql_alter.asp)
 
 Example:
 
@@ -97,7 +97,7 @@ ALTER TABLE products ADD stock INT;
 
 Used to delete existing records in a table.
 
-**[w3schools docs on DELETE](https://www.w3schools.com/sql/sql_delete.asp)**
+[w3schools docs on DELETE](https://www.w3schools.com/sql/sql_delete.asp)
 
 :::danger
 
@@ -117,7 +117,7 @@ DELETE FROM products WHERE id = 2;
 
 _FOREIGN KEY_ allows you to create links to other tables.
 
-**[w3schools docs on FOREIGN KEY](https://www.w3schools.com/sql/sql_foreignkey.asp)**
+[w3schools docs on FOREIGN KEY](https://www.w3schools.com/sql/sql_foreignkey.asp)
 
 Example:
 
@@ -137,7 +137,7 @@ CREATE TABLE orders (
 
 _INNER JOIN_ keyword selects records that have matching values in both tables.
 
-**[w3schools docs on INNER JOIN](https://www.w3schools.com/sql/sql_join_inner.asp)**
+[w3schools docs on INNER JOIN](https://www.w3schools.com/sql/sql_join_inner.asp)
 
 Example:
 

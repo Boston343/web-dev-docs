@@ -77,7 +77,7 @@ const config = {
       //   // https://docusaurus.io/docs/search
       //   appId: "process.env.ALGOLIA_APP_ID",
       //   apiKey: process.env.ALGOLIA_API_KEY,
-      //   indexName: "example",
+      //   indexName: "WEB_REAPER_SEARCH_INDEX",
       //   contextualSearch: true,
       //   searchParameters: {},
       //   searchPagePath: "search",

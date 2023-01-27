@@ -22,7 +22,7 @@ Good news is, there are ways to protect them.
 
 Environment variables allow you to keep track of secrets. You should _never_ upload these to github.
 
-You put them in a file `.env`. You can access them in your code using **[dotenv](https://www.npmjs.com/package/dotenv)**.
+You put them in a file `.env`. You can access them in your code using [dotenv](https://www.npmjs.com/package/dotenv).
 
 ```js
 import dotenv from "dotenv";
@@ -87,7 +87,7 @@ We can encrypt the password field as the next level of security. The password is
 
 Downside of this is it doesn't protect against someone with admin access to the website from finding out user passwords, because they can get the encryption key.
 
-With MongoDB and Mongoose, we can use a package **[mongoose-encryption](https://www.npmjs.com/package/mongoose-encryption)**.
+With MongoDB and Mongoose, we can use a package [mongoose-encryption](https://www.npmjs.com/package/mongoose-encryption).
 
 ```js title="app.js - relevant code"
 import encrypt from "mongoose-encryption";
@@ -118,7 +118,7 @@ Passwords can still be hacked form level 2. So what about another method. Here, 
 
 When a user inputs a password, you hash it, and compare that hash to the hash in the DB. If they match then the password is correct.
 
-We can use package **[md5](https://www.npmjs.com/package/md5)** for this.
+We can use package [md5](https://www.npmjs.com/package/md5) for this.
 
 ```js
 import md5 from "md5";
@@ -127,11 +127,11 @@ import md5 from "md5";
 md5(password);
 ```
 
-### 4. Hashing and Saltin with bcrypt
+### 4. Hashing and Salting with bcrypt
 
-**[bcrypt](https://www.npmjs.com/package/bcrypt)** is a slower hashing algorithm than md5 (much slower) so it's more secure. This is because it would take an attacker much longer to brute force the passwords.
+[bcrypt](https://www.npmjs.com/package/bcrypt) is a slower hashing algorithm than md5 (much slower) so it's more secure. This is because it would take an attacker much longer to brute force the passwords.
 
-_Salting_ is appending a random strick to the end of the password, before hashing. This makes it so that even if two users have the same password, the hash will be different.
+_Salting_ is appending a random string to the end of the password, before hashing. This makes it so that even if two users have the same password, the hash will be different.
 
 Notes:
 
@@ -155,11 +155,11 @@ bcrypt.compare(myPlaintextPassword, hash, function (err, result) {
 
 ### 5. Cookies and Sessions
 
-For this you can use **[passport](https://www.npmjs.com/package/passport)**, **[passport-local](https://www.npmjs.com/package/passport-local)**, **[express-session](https://www.npmjs.com/package/express-session)**, and with MongoDB / mongoose use **[passport-local-mongoose](https://www.npmjs.com/package/passport-local-mongoose)**.
+For this you can use [passport](https://www.npmjs.com/package/passport), [passport-local](https://www.npmjs.com/package/passport-local), [express-session](https://www.npmjs.com/package/express-session), and with MongoDB / mongoose use [passport-local-mongoose](https://www.npmjs.com/package/passport-local-mongoose).
 
 :::info
 
-For an usage example, see `Secrets` on branch `passport-cookies-sessions` **[here](https://github.com/Boston343/Secrets/tree/passport-cookies-sessions)**. This includes authentication, registration, logon, and logoff.
+For an usage example, see `Secrets` on branch `passport-cookies-sessions` [here](https://github.com/Boston343/Secrets/tree/passport-cookies-sessions). This includes authentication, registration, logon, and logoff.
 
 :::
 
@@ -171,15 +171,15 @@ OAuth is short for "Open Authentication" and allows us to add the capability for
 
 The _Access Token_ is what we can use to access data from people on that application (to which they have granted us access).
 
-Passport requires a `findorcreate` function to work with your DB. With MongoDB and Mongoose this is a useful package **[mongoose-findorcreate](https://www.npmjs.com/package/mongoose-findorcreate)**.
+Passport requires a `findorcreate` function to work with your DB. With MongoDB and Mongoose this is a useful package [mongoose-findorcreate](https://www.npmjs.com/package/mongoose-findorcreate).
 
 #### 6a. Google OAuth 2.0 Authentication
 
-For this, use Passport strategy **[passport-google-oauth20](https://www.passportjs.org/packages/passport-google-oauth20/)**.
+For this, use Passport strategy [passport-google-oauth20](https://www.passportjs.org/packages/passport-google-oauth20/).
 
 #### 6b. Facebook OAuth 2.0 Authentication
 
-For this, use Passport strategy **[passport-facebook](https://www.passportjs.org/packages/passport-facebook/)**.
+For this, use Passport strategy [passport-facebook](https://www.passportjs.org/packages/passport-facebook/).
 
 :::note
 
@@ -189,9 +189,9 @@ While implementing this I ran into issues testing. It seems like you _MUST_ have
 
 ## Authentication Example Project
 
-**[This](https://reap3r-secrets.glitch.me/)** is an example project I made using salting, hashing, and OAuth. You can test out the registration and login, although the 0Auth is limited to test accounts.
+[This](https://reap3r-secrets.glitch.me/) is an example project I made using salting, hashing, and OAuth. You can test out the registration and login, although the 0Auth is limited to test accounts.
 
-Code can be found **[here](https://github.com/Boston343/Secrets)**.
+Code can be found [here](https://github.com/Boston343/Secrets).
 
 Below is what the database entries look like for the app:
 
@@ -201,12 +201,12 @@ import secretsDB from './img/secrets_db.jpg';
 
 ## Other Authentication Resources
 
-Node.js passport login system tutorial (36 min) [here](https://www.youtube.com/watch?v=-RCnNyD0L-s).
+Node.js passport login system tutorial (36 min) [link](https://www.youtube.com/watch?v=-RCnNyD0L-s).
 
-Local authentication using passport in Node.js (docs) [here](https://www.sitepoint.com/local-authentication-using-passport-node-js/).
+Local authentication using passport in Node.js (docs) [link](https://www.sitepoint.com/local-authentication-using-passport-node-js/).
 
-User authentication in web apps with passport, node, express (6 hours) [here](https://www.youtube.com/watch?v=F-sFp_AvHc8).
+User authentication in web apps with passport, node, express (6 hours) [link](https://www.youtube.com/watch?v=F-sFp_AvHc8).
 
-User authentication with passport and express 4 (docs) [here](https://mherman.org/blog/local-authentication-with-passport-and-express-4/).
+User authentication with passport and express 4 (docs) [link](https://mherman.org/blog/local-authentication-with-passport-and-express-4/).
 
-Permissions / access control in web apps (docs) [here](https://wasp-lang.dev/blog/2022/11/29/permissions-in-web-apps).
+Permissions / access control in web apps (docs) [link](https://wasp-lang.dev/blog/2022/11/29/permissions-in-web-apps).

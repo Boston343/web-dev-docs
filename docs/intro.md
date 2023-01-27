@@ -8,7 +8,7 @@ This is my personal documentation I have made along my web design journey. It co
 
 Use the sidebar to navigate to the particular section you are interested in.
 
-Don't forget to check out the **[blog posts](/blog)** as well!
+Don't forget to check out the [blog posts](/blog) as well!
 
 import HomepageCards from "@site/src/components/HomepageCards";
 

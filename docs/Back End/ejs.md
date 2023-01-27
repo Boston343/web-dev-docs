@@ -4,9 +4,9 @@ sidebar_position: 3
 
 # EJS
 
-**[EJS](https://ejs.co/)** is a templating system for node which allows you to create HTML templates that can be edited using the server. It allows for less duplication of work, so you don't have to send a completely different HTML file for every case.
+[EJS](https://ejs.co/) is a templating system for node which allows you to create HTML templates that can be edited using the server. It allows for less duplication of work, so you don't have to send a completely different HTML file for every case.
 
-EJS works using tags. These tags can be found under the _tags_ section of **[docs](https://ejs.co/#docs)**.
+EJS works using tags. These tags can be found under the _tags_ section of [docs](https://ejs.co/#docs).
 
 ## Installing EJS
 
@@ -80,7 +80,7 @@ Lets say we have a `header.ejs` and a `footer.ejs` for the below example.
 
 ## Example Project
 
-For an example project, see TodoList **[code](https://github.com/Boston343/TodoList)**.
+For an example project, see TodoList [code](https://github.com/Boston343/TodoList).
 
 ```html title="TodoList: list.ejs"
 <%- include('header'); -%>

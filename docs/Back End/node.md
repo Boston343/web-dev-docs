@@ -4,11 +4,11 @@ sidebar_position: 1
 
 # Node
 
-**[Node](https://nodejs.org/en/)** is an open-source, cross-platform JavaScript runtime environment.
+[Node](https://nodejs.org/en/) is an open-source, cross-platform JavaScript runtime environment.
 
 ## Installation
 
-First, either install Node.js from their **[website](https://nodejs.org/en/)**, or use a Node version manager like **[nvm](https://www.geeksforgeeks.org/how-to-install-and-use-nvm-on-windows/)** to install Node.js and npm.
+First, either install Node.js from their [website](https://nodejs.org/en/), or use a Node version manager like [nvm](https://www.geeksforgeeks.org/how-to-install-and-use-nvm-on-windows/) to install Node.js and npm.
 
 :::tip
 
@@ -48,7 +48,7 @@ To exit, hit CTRL+C twice.
 
 ## Node.js API
 
-The **[Node.js API Docs](https://nodejs.org/api/)** describe what you can do.
+The [Node.js API Docs](https://nodejs.org/api/) describe what you can do.
 
 You can import packages as CommonJS (CJS) or ES Module (ESM). ESM is newer and more people are using it although you will still find CJS all over the place.
 
@@ -60,7 +60,7 @@ To use ESM version, in "package.json" you need the line `"type": "module",`
 
 ### FileSystem
 
-One popular package is the **[FileSystem](https://nodejs.org/api/fs.html)** package.
+One popular package is the [FileSystem](https://nodejs.org/api/fs.html) package.
 
 You use it (ESM) with:
 
@@ -86,7 +86,7 @@ If you want to install a package to use in your project, run `npm install packag
 
 ## ESLint
 
-**[ESLint](https://eslint.org/docs/latest/user-guide/getting-started)** is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
+[ESLint](https://eslint.org/docs/latest/user-guide/getting-started) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
 
 To use ESLint in your project, after initializing with `npm init`, run:
 

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # React
 
-**[React](https://reactjs.org/)** is a popular JavaScript library for building user interfaces.
+[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
 
 It is the "most loved and popular front-end framework". It breaks down everything into component trees.
 
@@ -20,7 +20,7 @@ It's kind of like creating your own HTML elements (component), so it's really ea
 
 ## VSCode Setup
 
-Follow **[this](https://github.com/facebook/create-react-app)** for first time setup.
+Follow [this](https://github.com/facebook/create-react-app) for first time setup.
 
 1. First time, install React with `npm i react`.
 2. Open your terminal (I use [Hyper](https://hyper.is/) configured for [git bash](https://gist.github.com/coco-napky/404220405435b3d0373e37ec43e54a23)) in the folder which you want to create your project folder.
@@ -353,7 +353,7 @@ function App() {
 
 Another hook in react is the `useEffect` hook. It allows you to perform side effects in components, such as: fetching data, directly updating the DOM, and timers.
 
-**[w3schools documentation on useEffect](https://www.w3schools.com/react/react_useeffect.asp)**
+[w3schools documentation on useEffect](https://www.w3schools.com/react/react_useeffect.asp)
 
 :::tip
 
@@ -522,15 +522,15 @@ Next.js is the most popular. It is better for SEO. It pre-loads info for fast us
 
 ## State Mangement
 
-A newer popular choice is **[Recoil](https://recoiljs.org/)**.
+A newer popular choice is [Recoil](https://recoiljs.org/).
 
-Battle tested choice is **[Redux](https://redux.js.org/)**. Recommended to use **[Redux Toolkit](https://redux-toolkit.js.org/)** for this.
+Battle tested choice is [Redux](https://redux.js.org/). Recommended to use [Redux Toolkit](https://redux-toolkit.js.org/) for this.
 
 ## UI Kits
 
 These are for styling your react app.
 
-Most popular is **[Material UI](https://mui.com/material-ui/getting-started/overview/)**.
+Most popular is [Material UI](https://mui.com/material-ui/getting-started/overview/).
 
 Other options include "Onsen UI", "Chakra UI", and "React Boostrap".
 

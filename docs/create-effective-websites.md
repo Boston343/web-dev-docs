@@ -48,9 +48,9 @@ You want to contrast serif-ness and weights.
 
 :::
 
-**[How to choose a font](https://fonts.google.com/knowledge/choosing_type/emotive_considerations_for_choosing_typefaces)**
+[How to choose a font](https://fonts.google.com/knowledge/choosing_type/emotive_considerations_for_choosing_typefaces)
 
-**[Good font list](https://kinsta.com/blog/best-google-fonts/)**
+[Good font list](https://kinsta.com/blog/best-google-fonts/)
 
 ### Serif and Sans-serif
 

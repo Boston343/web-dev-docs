@@ -10,7 +10,7 @@ API stands for **Application Programming Interface**. It allows applications to 
 
 ### Joke API
 
-**[Joke API](https://jokeapi.dev/)**
+[Joke API link](https://jokeapi.dev/)
 
 This has "/category" for different types of jokes.
 
@@ -20,7 +20,7 @@ Ex. https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw&contains=d
 
 ### OpenWeather API
 
-**[OpenWeather API](https://openweathermap.org/current#name)**
+[OpenWeather API link](https://openweathermap.org/current#name)
 
 To test this you need an api key. An example below will require you to put in your api key after "appid=". If you click on the link now you can see the result of an invalid API key.
 
@@ -30,7 +30,7 @@ Ex. https://api.openweathermap.org/data/2.5/weather?q=Miami&units=imperial&appid
 
 ### Postman
 
-**[Postman](https://www.postman.com/downloads/)** is a tool for testing APIs. It allows you to setup and save APIs nicely. It is a software you can install on your PC.
+[Postman](https://www.postman.com/downloads/) is a tool for testing APIs. It allows you to setup and save APIs nicely. It is a software you can install on your PC.
 
 ### JSON Viewer Pro
 
@@ -52,7 +52,7 @@ Set your keys in a file that is ignored using the .gitignore file. This is commo
 
 ## API Calls in JS
 
-You can use the **[https node module](https://nodejs.org/docs/latest/api/https.html#httpsgetoptions-callback)** for get requests to external server APIs.
+You can use the [https node module](https://nodejs.org/docs/latest/api/https.html#httpsgetoptions-callback) for get requests to external server APIs.
 
 ## JSON Functions
 
@@ -73,13 +73,13 @@ res.on('data', (d) => {
 
 This uses the OpenWeather API.
 
-**https://github.com/Boston343/WeatherProject**
+https://github.com/Boston343/WeatherProject
 
 ### Newsletter-Signup
 
 This uses the Mailchimp API.
 
-**https://github.com/Boston343/Newsletter-Signup**
+https://github.com/Boston343/Newsletter-Signup
 
 Docs on Mailchimp:
 
@@ -106,7 +106,7 @@ Use specific pattern of routes / endpoint URLs.
 
 #### Example Project with REST API
 
-**https://github.com/Boston343/Wiki-REST-API**
+https://github.com/Boston343/Wiki-REST-API
 
 Routes Available:
 
@@ -120,6 +120,4 @@ Routes Available:
 
 ### GraphQL
 
-From the **[GraphQL website](https://graphql.org/)**: GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
-
-I have not learned or used this yet :(
+From the [GraphQL website](https://graphql.org/): GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.

@@ -9,11 +9,11 @@ export default function CallingCard() {
   return (
     <Box
       sx={{
-        paddingTop: 4,
-        paddingBottom: 4,
+        paddingTop: 3,
+        paddingBottom: 3,
         backgroundColor: "background.paper",
-        borderTop: 3,
-        borderBottom: 3,
+        borderTop: 2,
+        borderBottom: 2,
         // borderImage: "linear-gradient(to right, blue, red)",
         borderImage: "linear-gradient(to right, #8e2de2, #4a00e0)",
         borderImageSlice: 1,

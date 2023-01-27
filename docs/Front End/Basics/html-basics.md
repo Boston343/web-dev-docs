@@ -8,7 +8,7 @@ All websites need HTML, it's the basic elements of a site. Normally, there is a 
 
 :::info
 
-Good documentation on HTML can be found here: **[HTML MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML)**
+Good documentation on HTML can be found here: [HTML MDN Docs](https://developer.mozilla.org/en-US/docs/Web/HTML).
 
 :::
 
@@ -93,4 +93,4 @@ This is a self closing tag.
 
 You can modify HTML elements. Ex. `<hr size="3">`. Here `size="3"` is the HTML Attribute
 
-**[MDN HTML Attribute Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)**
+[MDN HTML Attribute Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)

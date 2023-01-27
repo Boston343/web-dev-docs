@@ -35,13 +35,13 @@ There are many database options out there. These are just a few.
 
 ### Popular SQL Databases
 
-- **[MySQL](https://www.mysql.com/)**
-- **[PostgreSQL](https://www.postgresql.org/)**
+- [MySQL](https://www.mysql.com/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ### Popular NoSQL Databases
 
-- **[MongoDB](https://www.mongodb.com/)**
-- **[Redis](https://redis.io/)**
+- [MongoDB](https://www.mongodb.com/)
+- [Redis](https://redis.io/)
 
 ### MySQL vs MongoDB
 

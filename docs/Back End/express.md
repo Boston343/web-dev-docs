@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Express
 
-**[Express](https://expressjs.com/)** is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+[Express](https://expressjs.com/) is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
 :::caution
 
-This requires **[Node](/docs/Back%20End/node)** installed and setup.
+This requires [Node](/docs/Back%20End/node) installed and setup.
 
 :::
 
@@ -20,7 +20,7 @@ Now in the folder run `npm install express`
 
 ## Express Routing
 
-**[Routing](https://expressjs.com/en/starter/basic-routing.html)** refers to how an application’s endpoints (URIs) respond to client requests.
+[Routing](https://expressjs.com/en/starter/basic-routing.html) refers to how an application’s endpoints (URIs) respond to client requests.
 
 :::info
 
@@ -30,7 +30,7 @@ Express documentation on routing can be found [here](https://expressjs.com/en/gu
 
 ### Request Methods
 
-Express routing is modeled off of the **[HTTP request methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)**.
+Express routing is modeled off of the [HTTP request methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods).
 
 You define routing using methods of the Express `app` object that correspond to HTTP methods.
 
@@ -79,7 +79,7 @@ app
 
 ## Nodemon
 
-**[Nodemon](https://nodemon.io/)** enables the server to auto-restart on changes. This is very useful for development / testing.
+[Nodemon](https://nodemon.io/) enables the server to auto-restart on changes. This is very useful for development / testing.
 
 Install with `npm install -g nodemon`.
 
@@ -89,7 +89,7 @@ Now, when you save changes, the server is automatically restarted with the new c
 
 ## Express Starter Code
 
-If using CSM you can follow **[this](https://expressjs.com/en/starter/hello-world.html)**.
+If using CSM you can follow [this link](https://expressjs.com/en/starter/hello-world.html).
 
 If using ESM (_do itttttt_) don't forget to add the line in "package.json" of `"type": "module",`. Then:
 
@@ -128,7 +128,7 @@ app.get("/", (req, res) => {
 
 ## Example Project
 
-For a fairly basic example project, see Newsletter-Signup **[code](https://github.com/Boston343/Newsletter-Signup)** and **[website](https://fast-bald-mammal.glitch.me/)**
+For a fairly basic example project, see Newsletter-Signup [code](https://github.com/Boston343/Newsletter-Signup) and [website](https://fast-bald-mammal.glitch.me/).
 
 :::note
 

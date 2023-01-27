@@ -8,9 +8,9 @@ How to perform CRUD operations and use relationships with MongoDB.
 
 ## MongoDB Installation
 
-You can install the free community server **[here](https://www.mongodb.com/try/download/community)**.
+You can install the free community server [here](https://www.mongodb.com/try/download/community).
 
-Older **[instructions](https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514)** on how to download and install MongoDB.
+Older [instructions](https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514) on how to download and install MongoDB.
 
 :::tip
 
@@ -18,11 +18,11 @@ When installing MongoDB, note where the `data` and `log` directory are located. 
 
 :::
 
-Download the shell separately **[here](https://www.mongodb.com/try/download/shell)**.
+Download the shell separately [here](https://www.mongodb.com/try/download/shell).
 
 ## MongoDB CRUD
 
-**[MongoDB CRUD Docs](https://www.mongodb.com/docs/manual/crud/)**
+[MongoDB CRUD Docs](https://www.mongodb.com/docs/manual/crud/)
 
 To start, open the mongo shell and start mongosh.
 
@@ -38,7 +38,7 @@ To start, open the mongo shell and start mongosh.
 
 `show collections` shows all collections in the database.
 
-Queries look like `db.collection.find(query, projection, options)`. Reference is **[here](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/#mongodb-method-db.collection.find)**.
+Queries look like `db.collection.find(query, projection, options)`. Reference is [here](https://www.mongodb.com/docs/manual/reference/method/db.collection.find/#mongodb-method-db.collection.find).
 
 :::info
 
@@ -70,7 +70,7 @@ db.products.find({ _id: 1 }, { name: 1 });
 
 ### UPDATE
 
-Reference **[here](https://www.mongodb.com/docs/manual/tutorial/update-documents/)**.
+Reference [here](https://www.mongodb.com/docs/manual/tutorial/update-documents/).
 
 `db.collection.updateOne(filter, update, options)` updates one, can also use `.updateMany()`.
 
@@ -145,18 +145,18 @@ You can also have another type of relationship that goes into a separate collect
 
 ## MongoDB REGEX
 
-**[MongoDB and REGEX](https://data-flair.training/blogs/mongodb-regular-expression-regex/)**
+[MongoDB and REGEX](https://data-flair.training/blogs/mongodb-regular-expression-regex/)
 
-**[REGEX details](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options)**
+[REGEX details](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options)
 
 ## MongoDB with Node.js
 
 There's a native driver, and a DOM model called "Mongoose". Mongoose is much more popular.
 
-**[Native version docs](https://www.mongodb.com/docs/drivers/node/current/quick-start/)**
+[Native version docs](https://www.mongodb.com/docs/drivers/node/current/quick-start/)
 
 ## MongoDB GUI - Studio 3T
 
-**[Studio 3T](https://studio3t.com/)** is the most popular and up-to-date GUI for MongoDB.
+[Studio 3T](https://studio3t.com/) is the most popular and up-to-date GUI for MongoDB.
 
-I use it (free) personally and it's great.s
+I use it (free) personally and it's great.

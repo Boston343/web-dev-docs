@@ -130,9 +130,9 @@ document.querySelector("a").setAttribute("href", "https://www.bing.com");
 
 Add an event listener to set a function to be called whenever the specified event happens.
 
-How events work: [MDN addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+How events work: [MDN addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener).
 
-List of events: [MDN Events](https://developer.mozilla.org/en-US/docs/Web/Events)
+List of events: [MDN Events](https://developer.mozilla.org/en-US/docs/Web/Events).
 
 ```js
 // here "handleClick" is a function to call when the "click" event happens
@@ -145,4 +145,4 @@ document.querySelector("button").addEventListener("click", function () {
 });
 ```
 
-Adding event listeners to multiple elements: [Flaviscopes Post](https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/)
+Adding event listeners to multiple elements: [Flaviscopes Post](https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/).

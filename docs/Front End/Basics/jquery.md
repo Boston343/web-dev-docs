@@ -18,9 +18,9 @@ $("h1"); // best and shortest method
 
 ## Using jQuery in Website
 
-Good method is to use a CDN. **[Google](https://developers.google.com/speed/libraries#jquery)** is the most popular host.
+Good method is to use a CDN. [Google](https://developers.google.com/speed/libraries#jquery) is the most popular host.
 
-From **[here](https://developers.google.com/speed/libraries#jquery)** you just copy the `<script>` section and place it in the html just before you include your own js file (just before the closing body tag).
+From [here](https://developers.google.com/speed/libraries#jquery) you just copy the `<script>` section and place it in the html just before you include your own js file (just before the closing body tag).
 
 You _can_ have the scripts in the header, but then you need the following in your js file to make sure loaded in correct order. Like:
 
@@ -86,7 +86,7 @@ $("a").attr("href", "https://www.yahoo.com");
 
 ### Event Listeners
 
-**[jQuery events](https://api.jquery.com/category/events/)**
+[jQuery events](https://api.jquery.com/category/events/)
 
 ```js
 // click example
@@ -126,7 +126,7 @@ $("button").remove(); // removes all buttons from website
 
 ### Effects
 
-**[Effect documentation](https://api.jquery.com/category/effects/)**
+[Effect documentation](https://api.jquery.com/category/effects/)
 
 - .show()
 - .hide()

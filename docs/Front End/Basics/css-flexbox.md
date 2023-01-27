@@ -67,4 +67,4 @@ flex: 1;
 
 ## gap
 
-`gap` functions like margin except it is only between flexbox elements. Good demonstration **[here](https://coryrylan.com/blog/css-gap-space-with-flexbox)**
+`gap` functions like margin except it is only between flexbox elements. Good demonstration [here](https://coryrylan.com/blog/css-gap-space-with-flexbox).

@@ -74,7 +74,7 @@ fs.copyFileSynce("file1.txt", "file2.txt");
 
 ## NPM
 
-NPM stands for **N**ode **P**ackage **M**anager. You will likely use it to startup your projects.
+NPM stands for **N**ode **P**ackage **M**anager. You will likely use it to startup your projects for both front and back-end.
 
 ### npm init
 
@@ -83,6 +83,10 @@ Inside your new project folder run `npm init`. This creates the "package.json" f
 ### npm package installation
 
 If you want to install a package to use in your project, run `npm install package-name`. Ex. `npm install superheroes` installes the [superheroes](https://www.npmjs.com/package/superheroes) package, creating the "node_modules" folder and putting the package and any dependencies inside.
+
+### npm package update
+
+To update npm packages, there are a few ways to go about it. [This link](https://sebhastian.com/npm-update-all-packages/) provides a good explanation of how it works.
 
 ## ESLint
 

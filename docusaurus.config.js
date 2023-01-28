@@ -93,6 +93,18 @@ const config = {
           content:
             "docusaurus, material ui, website, development, coding, react, html, css, javascript, jquery, oauth, bootstrap, node, express, ejs, database, mongodb, mongoose, rest, graphql, hashing, salting, cookies, sessions",
         },
+        {
+          name: "msapplication-TileColor",
+          content: "#b6b6fb",
+        },
+        {
+          name: "msapplication-config",
+          content: "/img/browserconfig.xml",
+        },
+        {
+          name: "theme-color",
+          content: "#b6b6fb",
+        },
       ],
       docs: {
         sidebar: {
@@ -104,7 +116,7 @@ const config = {
         title: "Web Reaper Docs",
         hideOnScroll: true,
         logo: {
-          alt: "Reaper",
+          alt: "Web Reaper Logo",
           // src: "img/logo.svg",
           src: "img/favicon.ico",
           width: 32,

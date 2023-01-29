@@ -20,8 +20,59 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Web Reaper", // Usually your GitHub org/user name.
-  projectName: "Docs", // Usually your repo name.
+  // organizationName: "Web Reaper", // Usually your GitHub org/user name.
+  // projectName: "Docs", // Usually your repo name.
+
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/img/apple-touch-icon.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/img/favicon-32x32.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/img/favicon-16x16.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "manifest",
+        href: "/img/site.webmanifest",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "mask-icon",
+        href: "/img/safari-pinned-tab.svg",
+        color: "#b6b6fb",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "shortcut icon",
+        href: "/img/favicon.ico",
+      },
+    },
+  ],
 
   plugins: [
     [
@@ -87,6 +138,7 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
+
       metadata: [
         {
           name: "keywords",

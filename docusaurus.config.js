@@ -124,15 +124,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // algolia: {
-      //   // https://docusaurus.io/docs/search
-      //   appId: "process.env.ALGOLIA_APP_ID",
-      //   apiKey: process.env.ALGOLIA_API_KEY,
-      //   indexName: "WEB_REAPER_SEARCH_INDEX",
-      //   contextualSearch: true,
-      //   searchParameters: {},
-      //   searchPagePath: "search",
-      // },
+      algolia: {
+        // https://docusaurus.io/docs/search
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: "webreaper",
+        contextualSearch: true,
+        searchParameters: {},
+        searchPagePath: "search",
+      },
       colorMode: {
         defaultMode: "dark",
         disableSwitch: false,

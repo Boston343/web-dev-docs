@@ -8,6 +8,75 @@ Astro is a site generator tool that focuses on site speed. It supports static si
 
 It's main feature is **Islands** where it ships no javascript by default, and only shipping javascript when it's actually necessary. You can also use your components from pretty much any other framework!
 
+## Using Astro
+
+Their documentation is great. I recommend using the searchbar on [their docs site](https://docs.astro.build/en/getting-started/). Nevertheless, I have included some items here.
+
+### Astro NPM Commands
+
+- `npm create astro@latest` to create Astro project
+- `npm run dev` uses Vite to start Astro dev server
+- `npm run build` builds production site to `./dist/`
+- `npm run preview` serves `./dist/` to test deployment
+
+### Folder Structure
+
+- Everything happens in the `src` folder, it is processed by astro
+  - Inside is the `pages` folder. Everything in here is automatically a route
+  - `index.astro` is the homepage, like `webreaper.dev`
+    - Ex. if you have `about.astro` it is at `webreaper.dev/about`
+- `public` is at base root of server. Astro will not touch it. This is a good place to put images for example
+- `astro.config.mjs` is config setup for Astro
+
+### Routing
+
+Anything under the `pages` directory is automatically a route.
+
+> `pages/index.astro` is at the base route (/)
+>
+> `pages/about.astro` is at /about
+>
+> `pages/blog/index.astro` is at /blog
+
+### Layouts (Templates)
+
+You use "slots" to create layouts in astro. These are conventionally stored as `src/layouts`. In your layout `.astro` file you put `<slot />`. Whenever you wrap and astro page in the template, whatever you wrap will go inside the `<slot>` tag.
+
+You can also have named slots (for multiple slots in the same layout) and fallback content. See info about that in the [astro docs](https://docs.astro.build/en/core-concepts/astro-components/#slots).
+
+```jsx title=exampleTemplate.astro
+---
+const {title} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+  <slot>
+    "Default if nothing is passed in"
+  </slot>
+  </body>
+</html>
+```
+
+Then use it like
+
+```jsx title="myFile.astro"
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="About">
+  Hello World!
+</MainLayout>
+```
+
 ## Static Site Generation (SSG) vs Server Side Rendering (SSR)
 
 SSG's are lightning fast with pre-build HTML pages. But if you change any part of your site, the entire site has to be re-built and re-deployed. This is not good for sites that need dynamically generated info.
@@ -30,9 +99,11 @@ Astro's hybrid approach allows you to select which you want for each page indivi
 
 ## Astro Islands
 
-Astro islands extract the UI into smaller, isolated components. Unused javascript is replace with lightweight HTML for faster loads and time-to-interactive (TTI).
+Astro islands extract the UI into smaller, isolated components. Unused javascript is replace with lightweight HTML for faster loads and time-to-interactive (TTI). The astro core concept docs on this can be found [here](https://docs.astro.build/en/core-concepts/framework-components/#hydrating-interactive-components).
 
-You can define which parts of your website need javascript, and which do not. You can also "lazy-load" them, which means components don't hydrate until they scroll into view. This allows the HTML to be loaded fast so the user can see things quickly, and then become interactive once the JS can finish loading.
+You can define which parts of your website need javascript, and which do not. Any javascript in frontmatter will be run server side or at build time. Any javascript within `<script>` tags will run client side. You can use `<script></script>` tags in your `.astro` files. You can also use `client:*` directives to make componente interactive (hydrated). Example: `<Button client:load />` where Button is a jsx component with state.
+
+You can also "lazy-load" them, which means components don't hydrate until they scroll into view. This allows the HTML to be loaded fast so the user can see things quickly, and then become interactive once the JS can finish loading.
 
 :::note
 
@@ -45,6 +116,10 @@ Hydration is the process where client-side JS converts to a static HTML page.
 Available client directives and examples can be found [here](https://docs.astro.build/en/reference/directives-reference/#client-directives).
 
 :::
+
+### Swiper Example
+
+This uses react for the swiper. See my code [here](https://github.com/Boston343/manage-landing-page/tree/master/src/components/Testimonials).
 
 ## Astro Integrations
 
@@ -78,70 +153,6 @@ Within Tailwind, there are a ton of component frameworks you can use. Some of th
 :::
 
 Some that Astro does **NOT** support include Material UI, and Mantine. This is because they rely on CSS in Javascript.
-
-## Extras
-
-### AWS Adapter for Astro
-
-Can use [SST](https://sst.dev/) to build full-stack apps on AWS. Works with Astro, Next.js, Remix, and Solid and allows you to add backend features like a database, GraphQL API, Auth, Cron jobs, and any other AWS service.
-
-## Using Astro
-
-Their documentation is great. I recommend using the searchbar on [their docs site](https://docs.astro.build/en/getting-started/). Nevertheless, I have included some items here.
-
-### Astro NPM Commands
-
-- `npm create astro@latest` to create Astro project
-- `npm run dev` uses Vite to start Astro dev server
-- `npm run build` builds production site to `./dist/`
-- `npm run preview` serves `./dist/` to test deployment
-
-### Folder Structure
-
-- Everything happens in the `src` folder, it is processed by astro
-  - Inside is the `pages` folder. Everything in here is automatically a route
-  - `index.astro` is the homepage, like `webreaper.dev`
-    - Ex. if you have `about.astro` it is at `webreaper.dev/about`
-- `public` is at base root of server. Astro will not touch it. This is a good place to put images for example
-- `astro.config.mjs` is config setup for Astro
-
-### Layouts (Templates)
-
-You use "slots" to create layouts in astro. These are conventionally stored as `src/layouts`. In your layout `.astro` file you put `<slot />`. Whenever you wrap and astro page in the template, whatever you wrap will go inside the `<slot>` tag.
-
-You can also have named slots (for multiple slots in the same layout) and fallback content. See info about that in the [astro docs](https://docs.astro.build/en/core-concepts/astro-components/#slots).
-
-```jsx title=exampleTemplate.astro
----
-const {title} = Astro.props;
----
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-  <slot>
-    "Default if nothing is passed in"
-  </slot>
-  </body>
-</html>
-```
-Then use it like
-
-```jsx title="myFile.astro"
----
-import MainLayout from "../layouts/MainLayout.astro";
----
-
-<MainLayout title="About">
-  Hello World!
-</MainLayout>
-```
 
 ## CSS Styling
 
@@ -178,7 +189,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <style is:global>
   h1 {
-  background-color: gold;
+    background-color: gold;
   }
 </style>
 ```
@@ -191,9 +202,10 @@ You can also use other languages, like scss. This will require other dependencie
 <style lang="scss">
   h1{
     background-color: gold;
-  &:hover {
-    background-color: blue;
-  }
+
+    &:hover {
+      background-color: blue;
+    }
   }
 </style>
 ```
@@ -253,7 +265,7 @@ const { text, href, hidey } = Astro.props;
 >
 ```
 
-Use it like 
+Use it like
 
 ```jsx
 ---
@@ -263,9 +275,30 @@ import ButtonPrimary from "../ButtonPrimary/ButtonPrimary.astro";
 <ButtonPrimary text="Get Started" href="" hidey={true} />
 ```
 
-## Javascript
-
-Any javascript in frontmatter will be run server side or at build time. Any javascript within `<script>` tags will run client side. You can use `<script></script>` tags in your `.astro` files.
-
 ## Icons
 
+Use the package [astro-icons](https://github.com/natemoo-re/astro-icon#readme) with `npm i astro-icon`.
+
+Their icon list can be found [here](https://icon-sets.iconify.design/).
+
+:::tip
+
+I have had issues with certain icon sets. Some that have NOT worked for me include "material-symbols" and "ri".
+
+Some that HAVE worked for me are "mdi", "iconoir", "tabler".
+
+:::
+
+## Extras
+
+### AWS Adapter for Astro
+
+Can use [SST](https://sst.dev/) to build full-stack apps on AWS. Works with Astro, Next.js, Remix, and Solid and allows you to add backend features like a database, GraphQL API, Auth, Cron jobs, and any other AWS service.
+
+### Build an Astro blog
+
+Great [youtube video](https://www.youtube.com/watch?v=6XzyobQYQVQ) I followed while learning the basics of Astro.
+
+### Serverless Functions with Astro
+
+[Astro and Netlify functions](https://www.netlify.com/blog/how-to-deploy-astro/#astro-as-an-edge-rendered-site)

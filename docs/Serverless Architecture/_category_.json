@@ -1,0 +1,8 @@
+{
+  "label": "Serverless Architecture",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Jamstack, Serverless Functions, Back End As Service"
+  }
+}

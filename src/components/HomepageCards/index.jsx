@@ -14,7 +14,7 @@ import { IconContext } from "react-icons";
 import { FaReact } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import { BsShieldLock, BsServer } from "react-icons/bs";
-import { SiGraphql } from "react-icons/si";
+import { SiGraphql, SiAwslambda } from "react-icons/si";
 
 //-------------------------------------------------------------------
 //                    Array for Featured Cards
@@ -55,7 +55,7 @@ const FeaturedDocs = [
   },
   {
     title: "Serverless Architecture",
-    icon: <BsServer />,
+    icon: <SiAwslambda />,
     link: "/docs/category/serverless-architecture",
     description: (
       <>

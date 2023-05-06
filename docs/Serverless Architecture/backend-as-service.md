@@ -85,6 +85,8 @@ This is my comparison of their free plans (monthly). Their plans can change over
 
 [Article](https://matt-spence.com/medium/developers-you-dont-always-need-a-coded-backend-for-your-forms) on forms without backend.
 
+## More to come... basic text below
+
     		Prismic - headless CMS
     			Free option for 1 user and pretty cheap for a few users
     			https://prismic.io/pricing

@@ -55,7 +55,7 @@ Free to start out but will quickly start billing you by usage - only 10GB/mo ban
 
 ### Sanity vs Storyblok
 
-This is my comparison of their free plans (monthly).
+This is my comparison of their free plans (monthly). Their plans can change over time so best to double check on their websites.
 
 |           Sanity            |               Storyblok               |
 | :-------------------------: | :-----------------------------------: |
@@ -68,21 +68,22 @@ This is my comparison of their free plans (monthly).
 |        10k documents        |              25k stories              |
 | custom preview environment  |        2 preview environments         |
 
+### Tina
+
+[Tina](https://tina.io/) is a git based CMS which edits the contents of your git repository. It has a decent free option with 2 users.
+
+- Great support with Next.js, Docusaurus, but can integrate into any SSG (including Astro)
+  - [Tina info on Astro](https://tina.io/docs/frameworks/astro/)
+    - Add to astro [guide](https://tina.io/guides/tinacms/non-react-based-ssg/guide/)
+  - [Astro docs on Tina](https://docs.astro.build/en/guides/cms/tina-cms/)
+- [Tina docs](https://tina.io/blog/using-graphql-with-the-filesystem/) on how to use graphql with the filesystem
+- [How media works](https://tina.io/docs/reference/media/overview/) with Tina CMS
+- [Contextual editing](https://tina.io/docs/contextual-editing/overview/) with Tina
+- Tina [Github repo](https://github.com/tinacms/tinacms)
+
 ## Forms
 
 [Article](https://matt-spence.com/medium/developers-you-dont-always-need-a-coded-backend-for-your-forms) on forms without backend.
-
-    		Tina - git based CMS
-    			Decent free option with 2 users
-    			Great support for Next.js, but can integrate into any SSG (including Astro)
-    			https://tina.io/
-    			Astro: https://tina.io/docs/frameworks/astro/
-    			Astro docs: https://docs.astro.build/en/guides/cms/tina-cms/
-    			Add to Astro: https://tina.io/guides/tinacms/non-react-based-ssg/guide/
-    			https://tina.io/blog/using-graphql-with-the-filesystem/
-    			https://github.com/tinacms/tinacms
-    			Media: https://tina.io/docs/reference/media/overview/
-    			Contextual Editing: https://tina.io/docs/contextual-editing/overview/
 
     		Prismic - headless CMS
     			Free option for 1 user and pretty cheap for a few users

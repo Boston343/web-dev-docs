@@ -14,7 +14,7 @@ import { IconContext } from "react-icons";
 import { FaReact } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 import { BsShieldLock, BsServer } from "react-icons/bs";
-import { SiGraphql } from "react-icons/si";
+import { SiGraphql, SiAwslambda } from "react-icons/si";
 
 //-------------------------------------------------------------------
 //                    Array for Featured Cards
@@ -37,8 +37,8 @@ const FeaturedDocs = [
     link: "/docs/category/advanced",
     description: (
       <>
-        React, Next.js, and various UI libraries like Material UI, Bootstrap,
-        and Tailwind CSS.
+        Astro, React, and various UI libraries like Material UI, Bootstrap, and
+        Tailwind CSS.
       </>
     ),
   },
@@ -50,6 +50,17 @@ const FeaturedDocs = [
       <>
         Frameworks and tools to use for creating a website back end - such as
         Node, Express, EJS, and Databases.
+      </>
+    ),
+  },
+  {
+    title: "Serverless Architecture",
+    icon: <SiAwslambda />,
+    link: "/docs/category/serverless-architecture",
+    description: (
+      <>
+        What is it and how to use it? Jamstack, Serverless Functions, and
+        Back-end as a Service (BaaS).
       </>
     ),
   },

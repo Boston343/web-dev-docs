@@ -1,0 +1,190 @@
+---
+title: "Astro RSS Feed Blog Post Images"
+slug: astro-rss-feed-blog-post-images
+description: Guide on adding post main images to your rss feed for use in MailerLite and other tools.
+authors: [Reaper]
+# image: https://raw.githubusercontent.com/Boston343/web-dev-docs/main/blog/2023-01-07-materialui-with-docusaurus/materialui-with-docusaurus.jpg
+tags: [astro, rss, mailerlite]
+---
+
+Want to add an image to your RSS feed blog posts to integrate with something like MailerLite? Here I'll go through how to do this on an Astro site, although similar concepts will apply for any rss feed. You can do this using the integration `@astrojs/rss`. the Astro RSS docs can be found [here](https://docs.astro.build/en/guides/rss/).
+
+## General @astrojs/rss Setup
+
+```bash
+npm install @astrojs/rss
+```
+
+Create a file in `src/pages` with a name of your choice and the extension `.xml.ts` to be used as the output URL for your feed. A common name is `rss.xml`. When your website builds, your rss feed will exist at `site/rss.xml`.
+
+In this new file, import the `rss()` helper from `@astrojs/rss` and export a function that returns the xml data.
+
+Note that `context.site` is defined in `astro.config.mjs` and is something like "https://webreaper.dev".
+
+```js title="src/pages/rss.xml.ts"
+import rss from "@astrojs/rss";
+
+export async function get(context) {
+  return rss({
+    // `<title>` field in output xml
+    title: "Web Reaper Blog",
+    // `<description>` field in output xml
+    description: `
+      Quick reference for web development tips, tools, and techniques.`,
+    // Pull in your project "site" from the endpoint context
+    // https://docs.astro.build/en/reference/api-reference/#contextsite
+    site: context.site,
+    // Array of `<item>`s in output xml
+    // in "items" is where we will put blog post data
+    items: [],
+  });
+}
+```
+
+### Blog Post Items
+
+Lets say we have a blog post content collection called "posts". We can get the posts data and add them to the rss items like below. Note that the specific `post.data.item` could change based on how you defined your frontmatter.
+
+```js title="src/pages/rss.xml.ts"
+import rss from "@astrojs/rss";
+import { getCollection, CollectionEntry } from "astro:content";
+
+export async function get(context) {
+  const posts: CollectionEntry<"posts">[] = await getCollection("posts");
+
+  return rss({
+    // `<title>` field in output xml
+    title: "Web Reaper Blog",
+    // `<description>` field in output xml
+    description: `
+      Quick reference for web development tips, tools, and techniques.`,
+    // Pull in your project "site" from the endpoint context
+    // https://docs.astro.build/en/reference/api-reference/#contextsite
+    site: context.site,
+    // Array of `<item>`s in output xml
+    // in "items" is where we will put blog post data
+    items: posts.map((post) => ({
+      title: post.data.title,
+      pubDate: post.data.datetime,
+      description: posts.data.description,
+      author: `developer@webreaper.dev (${post.data.author})`,
+      // This example assumes all posts are rendered as `/posts/[slug]` routes
+      link: `/posts/${post.slug}/`,
+    })),
+  });
+}
+```
+
+## Add Featured Image Support
+
+In order to add image support, we need to add an xml namespace or "xmlns". If you are not familiar with this, it is basically a definition of specific tags made by someone else. Further information can be found [here](https://www.w3schools.com/XML/xml_namespaces.asp).
+
+The namespace we will be adding is "media" from "http://search.yahoo.com/mrss/". Then we can use that namespace to define our image.
+
+```js title="src/pages/rss.xml.ts"
+import rss from "@astrojs/rss";
+import { getCollection, CollectionEntry } from "astro:content";
+
+export async function get(context) {
+  const posts: CollectionEntry<"posts">[] = await getCollection("posts");
+
+  return rss({
+    // `<title>` field in output xml
+    title: "Web Reaper Blog",
+    // `<description>` field in output xml
+    description: `
+      Quick reference for web development tips, tools, and techniques.`,
+    // Pull in your project "site" from the endpoint context
+    // https://docs.astro.build/en/reference/api-reference/#contextsite
+    site: context.site,
+    // add `xmlns:media="http://search.yahoo.com/mrss/"`
+    xmlns: {
+      media: "http://search.yahoo.com/mrss/",
+    },
+    // Array of `<item>`s in output xml
+    // in "items" is where we will put blog post data
+    items: posts.map((post) => ({
+      title: post.data.title,
+      pubDate: post.data.datetime,
+      description: posts.data.description,
+      author: `developer@webreaper.dev (${post.data.author})`,
+      // This example assumes all posts are rendered as `/posts/[slug]` routes
+      link: `/posts/${post.slug}/`,
+
+      // custom data for media. The url must be the full url (including https://)
+      customData: `<media:content
+          type="image/${post.data.image.format == "jpg" ? "jpeg" : "png"}"
+          width="${post.data.image.width}"
+          height="${post.data.image.height}"
+          medium="image"
+          url="${context.site + post.data.image.src}" />
+      `,
+    })),
+  });
+}
+```
+
+## Verify Your RSS Feed
+
+A few resources to verify your RSS Feed is setup correct (or help with debugging) are below. Simply put your RSS feed address into the website and it will tell you what is wrong or suggest improvements.
+
+- https://validator.w3.org/feed/check.cgi
+- https://www.rssboard.org/rss-validator/check.cgi
+
+## Use with MailerLite, Mailchimp, etc
+
+Now when you create campaigns in MailerLite, you can have it use your RSS feed and your image, title, description, publish date, and author will all show up. Your automated marketing has been leveled up.
+
+## Bonus: Atom Support
+
+When verifying your RSS feed, you'll probably see a recommendation for atom support. You can do this with the following few additions.
+
+```js title="src/pages/rss.xml.ts"
+import rss from "@astrojs/rss";
+import { getCollection, CollectionEntry } from "astro:content";
+
+export async function get(context) {
+  const posts: CollectionEntry<"posts">[] = await getCollection("posts");
+
+  return rss({
+    // `<title>` field in output xml
+    title: "Web Reaper Blog",
+    // `<description>` field in output xml
+    description: `
+      Quick reference for web development tips, tools, and techniques.`,
+    // Pull in your project "site" from the endpoint context
+    // https://docs.astro.build/en/reference/api-reference/#contextsite
+    site: context.site,
+    // add `xmlns:media="http://search.yahoo.com/mrss/"`
+    xmlns: {
+      media: "http://search.yahoo.com/mrss/",
+      atom: "http://www.w3.org/2005/Atom",
+    },
+    // add atom:link to be compatible with atom
+    customData: `<atom:link href="${context.site}rss.xml" rel="self" type="application/rss+xml" />`,
+    // Array of `<item>`s in output xml
+    // in "items" is where we will put blog post data
+    items: posts.map((post) => ({
+      title: post.data.title,
+      pubDate: post.data.datetime,
+      description: posts.data.description,
+      author: `developer@webreaper.dev (${post.data.author})`,
+      // This example assumes all posts are rendered as `/posts/[slug]` routes
+      link: `/posts/${post.slug}/`,
+
+      // custom data for media. The url must be the full url (including https://)
+      customData: `<media:content
+          type="image/${post.data.image.format == "jpg" ? "jpeg" : "png"}"
+          width="${post.data.image.width}"
+          height="${post.data.image.height}"
+          medium="image"
+          url="${context.site + post.data.image.src}" />
+      `,
+    })),
+  });
+}
+```
+
+import CallingCard from "@site/src/components/CallingCard";
+
+<CallingCard />

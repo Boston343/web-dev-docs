@@ -9,6 +9,8 @@ tags: [astro, rss, mailerlite]
 
 Want to add an image to your RSS feed blog posts to integrate with something like MailerLite? Here I'll go through how to do this on an Astro site, although similar concepts will apply for any rss feed. You can do this using the integration `@astrojs/rss`. the Astro RSS docs can be found [here](https://docs.astro.build/en/guides/rss/).
 
+<!--truncate-->
+
 ## General @astrojs/rss Setup
 
 ```bash
@@ -19,7 +21,7 @@ Create a file in `src/pages` with a name of your choice and the extension `.xml.
 
 In this new file, import the `rss()` helper from `@astrojs/rss` and export a function that returns the xml data.
 
-Note that `context.site` is defined in `astro.config.mjs` and is something like "https://webreaper.dev".
+Note that `context.site` is defined in `astro.config.mjs` and is something like "[webreaper.dev](https://webreaper.dev)".
 
 ```js title="src/pages/rss.xml.ts"
 import rss from "@astrojs/rss";
@@ -79,7 +81,7 @@ export async function get(context) {
 
 In order to add image support, we need to add an xml namespace or "xmlns". If you are not familiar with this, it is basically a definition of specific tags made by someone else. Further information can be found [here](https://www.w3schools.com/XML/xml_namespaces.asp).
 
-The namespace we will be adding is "media" from "http://search.yahoo.com/mrss/". Then we can use that namespace to define our image.
+The namespace we will be adding is "media" from [http://search.yahoo.com/mrss/](http://search.yahoo.com/mrss/). Then we can use that namespace to define our image.
 
 ```js title="src/pages/rss.xml.ts"
 import rss from "@astrojs/rss";

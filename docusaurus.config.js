@@ -209,10 +209,10 @@ const config = {
           {
             title: "Blog",
             items: [
-              {
-                label: "Astro RSS Feed Blog Post Images",
-                href: "/blog/astro-rss-feed-blog-post-images/",
-              },
+              // {
+              //   label: "Astro RSS Feed Blog Post Images",
+              //   href: "/blog/astro-rss-feed-blog-post-images/",
+              // },
               {
                 label: "Material UI with Docusaurus",
                 href: "/blog/material-ui-theme-with-docusaurus/",

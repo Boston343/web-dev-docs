@@ -11,7 +11,7 @@ require("dotenv").config();
 const config = {
   title: "Web Reaper Docs",
   tagline: "Quick reference for web development tips, tools, and techniques.",
-  url: "https://webreaper.dev",
+  url: "https://docs.webreaper.dev",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",

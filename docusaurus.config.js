@@ -183,6 +183,11 @@ const config = {
           },
           { to: "/blog/", label: "Blog", position: "left" },
           {
+            to: "https://webreaper.dev/",
+            label: "Webreaper.dev",
+            position: "right",
+          },
+          {
             href: "https://github.com/Boston343/web-dev-docs",
             position: "right",
             className: "navbar__item-github",
@@ -222,6 +227,10 @@ const config = {
           {
             title: "External",
             items: [
+              {
+                label: "Webreaper Home Page",
+                href: "https://webreaper.dev/",
+              },
               {
                 label: "Twitter",
                 href: "https://twitter.com/BowTiedWebReapr",
